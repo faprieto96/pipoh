@@ -87,11 +87,11 @@ if __name__ == '__main__':
 
 
     #ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
-    ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0, 1]), 'lower_bound': ('cont', [0.8, 1])})
+    ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
 
 
 
-
+    """
     def dominancia_estocastica(self):
 
         lambdaValue = self.lambda_value
@@ -99,15 +99,13 @@ if __name__ == '__main__':
         upperBoundValue = self.lower_bound
 
 
-        return 'SUCCESS'
-
-
+        return lambdaValue+upperBoundValue
 
 
     params_defined = {'f': dominancia_estocastica, 'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
 
     ejemplo3 = pydiversity(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_markets', params=params_defined)
-
+    """
     print('FINISHED')
 
 

@@ -6,23 +6,15 @@ from pyGPGO.acquisition import Acquisition
 from pyGPGO.surrogates.GaussianProcess import GaussianProcess
 from pyGPGO.GPGO import GPGO
 """
+import numpy as np
 
 from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
 from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_common_functions import test_fcn
-import numpy as np
-# from common_functions.error_loss import errorLoss
-
-
-# from concrete_factories.bayesian_folder.custom_bayesian import CustomBayesian
 from sklearn.covariance import EmpiricalCovariance
-#from qpsolvers import solve_qp
-
-
-
+from qpsolvers import solve_qp
 
 
 class BayesianWUBC(InterfaceBayesian):
-    """The Big Chair Concrete Class that implements the IChair interface"""
 
     def __init__(self, name='Weighted Upper Bound Constraint, WUBC', lamb=1, delta=1, upper_bound=1, lower_bound=0, validation_windows=36, cv_windows=12):
         self.name = name
@@ -96,11 +88,7 @@ class BayesianWUBC(InterfaceBayesian):
         ub = UB
 
         # (Wa, varP, third_parameter) = solve_qp(P, q, G, h, A, b)
-        #W = np.array(solve_qp(P, q, G, h, A, b))
-        W = np.ones((6, 1))
+        W = np.array(solve_qp(P, q, G, h, A, b))
+        #W = np.ones((6, 1))
 
         return W
-
-
-
-
