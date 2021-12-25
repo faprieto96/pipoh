@@ -10,21 +10,6 @@ class InterfaceBayesian(InitialConfiguration, metaclass=ABCMeta):
 
     @staticmethod
     @abstractmethod
-    def get_dimensions():
-        """A static interface method"""
-
-    @staticmethod
-    @abstractmethod
-    def get_hyper_parameters():
-        """A static interface method"""
-
-    @staticmethod
-    @abstractmethod
-    def get_all_parameters():
-        """A static interface method"""
-
-    @staticmethod
-    @abstractmethod
     def solve_optimization_problem():
         """A static interface method"""
 

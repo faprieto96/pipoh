@@ -5,8 +5,6 @@ from strategies.class_ew import fnc_EW
 
 
 class EW(fnc_EW, InterfaceNonParametric):
-    """The EW Bayesian Concrete Class that implements the Bayesian interface"""
-
     def __init__(self, name='Equally Weighted Strategy', lamb=0, delta=0, upper_bound=0, lower_bound=0, validation_windows=36, cv_windows=12):
         self.name = name
         self.lamb = lamb

@@ -7,20 +7,24 @@ import numpy as np
 
 
 class InitialConfiguration:
-    def initial_configuration(self, strategy, params):
-        if strategy == 'WUBC':
-            #optim_param = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1])}
-            optim_param = params
-        if strategy == 'WLBC':
-            param_hip = {'lambda_value': ('cont', [0, 1]), 'lowerBound': ('cont', [0, 1])}
+    def initial_configuration(self, strategy, params=None):
+
+        if params == None:
+            if strategy == 'WUBC':
+                optim_param  = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1])}
+            if strategy == 'WLBC':
+                optim_param  = {'lambda_value': ('cont', [0, 1]), 'lowerBound': ('cont', [0, 1])}
+            param_hip = params
+            self.optim_param = params
+
         if strategy == 'CustomStrategy':
             for x, y in params.items():
                 if x!='f' and x!='hp':
                     exec('self.{}=params["{}"]'.format(x, x))
-            #self.validation_windows=params['validation_windows']
             param_hip = params['hp']
             self.optim_param = params['hp']
-        if strategy != 'CustomStrategy':
+
+        if params != None and strategy != 'CustomStrategy':
             param_hip = params
             self.optim_param = params
 
@@ -36,20 +40,6 @@ class InitialConfiguration:
         sexp = squaredExponential()
         gp = GaussianProcess(sexp)
         acq = Acquisition(mode='ExpectedImprovement')
-        #param = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1])}
-
-        # param es equivalente en MATLAB a:
-        #   num = WUBC.obj.lambda_value
-        #   ub = WUBC.obj.upperBound
-        # Bayesian optimization:
-
-
-
-        """'lambda_value1º
-        'lambda_value2'
-        'lambda_value3'"""
-        #param_hip = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1])}
-
 
         def errorLoss(*args, **kwards):
             for x,y in kwards.items():
