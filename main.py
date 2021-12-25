@@ -85,13 +85,15 @@ if __name__ == '__main__':
         output_financial_summary = output_financial_ratios(ratios, STRATEGY_SELECTED.returns, STRATEGY_SELECTED.weights)
         return output_financial_summary
 
+    #Ejemplo 1: Sin método de optimización de hiper-parámetros
+    ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
 
-    #ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
+    #Ejemplo 2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
     ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
 
 
 
-    """
+    #Ejemplo 3: Incluyendo una función externa
     def dominancia_estocastica(self):
 
         lambdaValue = self.lambda_value
@@ -105,7 +107,12 @@ if __name__ == '__main__':
     params_defined = {'f': dominancia_estocastica, 'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
 
     ejemplo3 = pydiversity(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_markets', params=params_defined)
-    """
+
+
+
+    #Ejemplo 4: optimizer GridSearchCV
+    pydiversity(strategy='WLBC', optimization='GridSearchCV', input_data='emerging_markets', params=params_defined)
+    
     print('FINISHED')
 
 
