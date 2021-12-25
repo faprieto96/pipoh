@@ -2,7 +2,6 @@ from concrete_factories.non_parametric.non_parametric_strategies.ew import EW
 
 
 class NonParametricFactory:
-    """The Factory Class"""
 
     @staticmethod
     def get_specific_strategy(strategy_selected, params=None):

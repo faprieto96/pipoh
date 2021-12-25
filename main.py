@@ -12,10 +12,9 @@ import sys
 import warnings
 if not sys.warnoptions:
     warnings.simplefilter("ignore")
+#data = np.matrix(pd.read_csv(str(os.getcwd() + '/data_library/6_Emerging_Markets_8years.csv'), header=None))
 
 if __name__ == '__main__':
-
-    #data = np.matrix(pd.read_csv(str(os.getcwd() + '/data_library/6_Emerging_Markets_8years.csv'), header=None))
 
     def pydiversity(strategy: str, input_data: callable, optimization:str = None, params = None):
         try:
@@ -49,10 +48,10 @@ if __name__ == '__main__':
         return output_financial_summary
 
 
-
     #Ejemplo 1: Sin método de optimización de hiper-parámetros
     ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
-
+    print(ejemplo1)
+    
     #Ejemplo 2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
     ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
 
@@ -67,9 +66,10 @@ if __name__ == '__main__':
     ejemplo3 = pydiversity(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_markets', params=params_defined)
 
     #Ejemplo 4: optimizer GridSearchCV
-    pydiversity(strategy='WLBC', optimization='GridSearchCV', input_data='emerging_markets', params=params_defined)
+    params_defined = {'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
+    print(pydiversity(strategy='WLBC', optimization='GridSearchCV', input_data='emerging_markets', params=params_defined))
 
-
+    
 
 
 

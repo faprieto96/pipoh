@@ -19,7 +19,7 @@ class StrategyFactory(InterfaceStrategyFactory):
             if strategy_selected in list_bayesian_strategies:
                 return BayesianFactory.get_specific_strategy(strategy_selected, params)
             if strategy_selected in list_non_parametric_strategies:
-                return NonParametricFactory.get_specific_strategy(strategy_selected, params)
+                return NonParametricFactory.get_specific_strategy(strategy_selected)
             if strategy_selected in list_gscv_strategies:
                 return gscvFactory.get_specific_strategy(strategy_selected, params)
             raise Exception('No Factory Found')

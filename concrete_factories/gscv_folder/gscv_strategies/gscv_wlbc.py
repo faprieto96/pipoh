@@ -1,22 +1,10 @@
-"""A Class of Strategy"""
-
-"""
-from pyGPGO.covfunc import squaredExponential
-from pyGPGO.acquisition import Acquisition
-from pyGPGO.surrogates.GaussianProcess import GaussianProcess
-from pyGPGO.GPGO import GPGO
-"""
-
 from concrete_factories.gscv_folder.gscv_interface import InterfaceGSCV
 from concrete_factories.gscv_folder.gscv_strategies.bayesian_common_functions import test_fcn
-import numpy as np
-from sklearn.covariance import EmpiricalCovariance
-from qpsolvers import solve_qp
+from strategies.class_wlbc import fnc_WLBC
 
+class gscvWLBC(fnc_WLBC, InterfaceGSCV):
 
-class gscvWLBC(InterfaceGSCV):
-
-    def __init__(self, name='Weighted Upper Bound Constraint, WUBC', lamb=1, delta=1, upper_bound=1, lower_bound=0, validation_windows=36, cv_windows=12):
+    def __init__(self, name='Weighted lower Bound Constraint, WUBC', lamb=1, delta=1, upper_bound=1, lower_bound=0, validation_windows=36, cv_windows=12):
         self.name = name
         self.lamb = lamb
         self.delta = delta
@@ -49,46 +37,5 @@ class gscvWLBC(InterfaceGSCV):
 
         return test_fcn(self.lamb, self.delta)
 
-
     def solve_optimization_problem(self):
-        # Type: It returns the optimized weights
-        # Compute numbers of data points and assets
-        lambdaValue=self.optim_param.get('lambda_value')
-        (numElements, N) = self.intermediate_data.shape
-        # mean and covariance
-        assert np.count_nonzero(np.isnan(self.intermediate_data)) == 0
-        if len(self.intermediate_data)==0:
-            pass
-        try:
-            Sigma = EmpiricalCovariance().fit(self.intermediate_data).covariance_ * 12  # I use 12 for annualizing the covmatrix
-        except:
-            pass
-        Vars = np.diag(Sigma)  # variances of the stocks
-        mu = self.intermediate_data.mean(axis=0).H * 12  # mean log returns
-
-        lambdaValue = self.lamb
-        # lambdaValue = 0.886
-        lowerBoundValue = self.lower_bound
-        # lowerBoundValue = 0
-        H = 2 * (lambdaValue * Sigma)
-        f = - mu.H  # FALTA TRANSPOSE
-
-        Aeq = np.ones((1, N))
-        beq = 1
-        LB = np.ones((1, N))* lowerBoundValue
-        UB = np.ones((1, N))
-
-        P = H
-        q = np.asarray(f).reshape((6,))
-        G = np.zeros((6, 6))
-        h = np.zeros(6)
-        A = np.asarray(Aeq).reshape((6,))
-        b = np.array([beq])
-        lb = LB
-        ub = UB
-
-        # (Wa, varP, third_parameter) = solve_qp(P, q, G, h, A, b)
-        W = np.array(solve_qp(P, q, G, h, A, b))
-        #W = np.ones((6, 1))
-
-        return W
+        return super(gscvWLBC, self).solve_optimization_problem()

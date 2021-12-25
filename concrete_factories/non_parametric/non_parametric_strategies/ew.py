@@ -1,9 +1,10 @@
 from concrete_factories.non_parametric.non_parametric_interface import InterfaceNonParametric
 from common_functions.rolling_windows_validation import rolling_windows_validation
 import numpy as np
+from strategies.class_ew import fnc_EW
 
 
-class EW(InterfaceNonParametric):
+class EW(fnc_EW, InterfaceNonParametric):
     """The EW Bayesian Concrete Class that implements the Bayesian interface"""
 
     def __init__(self, name='Equally Weighted Strategy', lamb=0, delta=0, upper_bound=0, lower_bound=0, validation_windows=36, cv_windows=12):
@@ -38,22 +39,5 @@ class EW(InterfaceNonParametric):
 
 
     def solve_optimization_problem(self):
-        """
-        Equally Weighted Strategy
-        :param data_received:
-        :param parameters:
-        :param optimization:
-        :return: It returns the optimized weights
-        """
-        name = 'Equally Weighted Strategy'
-
-        (numElements, N) = self.intermediate_data.shape
-        # mean and covariance
-
-        weights = np.ones((N, 1)) * (1 / N)
-        self.weights = weights
-
-        return self.weights
-
-
+        return super().solve_optimization_problem()
 
