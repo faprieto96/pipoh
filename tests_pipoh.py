@@ -1,5 +1,5 @@
-import pipoh
+from pipoh import pipoh
 
-pydiversity(strategy='EW', input_data='emerging_markets')
+pipoh(strategy='EW', input_data='emerging_markets')
 
 print(pypoh)

@@ -13,7 +13,7 @@ if not sys.warnoptions:
 
 #if __name__ == '__main__':
 
-def pydiversity(strategy: str, input_data: callable, optimization:str = None, params = None):
+def pipoh(strategy: str, input_data: callable, optimization:str = None, params = None):
     try:
         input_data = Data.library_data(input_data=input_data)
     # The user introduces the path of .csv file
@@ -44,30 +44,31 @@ def pydiversity(strategy: str, input_data: callable, optimization:str = None, pa
     STRATEGY_SELECTED.output_financial_summary = output_financial_ratios(STRATEGY_SELECTED.ratios, STRATEGY_SELECTED.returns, STRATEGY_SELECTED.weights)
     return STRATEGY_SELECTED.output_financial_summary
 
+"""
+#Ejemplo 1: Sin método de optimización de hiper-parámetros
+ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
+print(ejemplo1)
 
-    #Ejemplo 1: Sin método de optimización de hiper-parámetros
-    ejemplo1 = pydiversity(strategy='EW', input_data='emerging_markets')
-    print(ejemplo1)
+#Ejemplo 2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
+ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
+print(ejemplo2)
 
-    #Ejemplo 2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-    ejemplo2 = pydiversity(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
-    print(ejemplo2)
+#Ejemplo 3: Incluyendo una función externa
+def dominancia_estocastica(self):
+    lambdaValue = self.lambda_value
+    # lambdaValue = 0.886
+    upperBoundValue = self.lower_bound
+    return lambdaValue+upperBoundValue
 
-    #Ejemplo 3: Incluyendo una función externa
-    def dominancia_estocastica(self):
-        lambdaValue = self.lambda_value
-        # lambdaValue = 0.886
-        upperBoundValue = self.lower_bound
-        return lambdaValue+upperBoundValue
-
-    params_defined = {'f': dominancia_estocastica, 'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
-    ejemplo3 = pydiversity(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_markets', params=params_defined)
-    print(ejemplo3)
+params_defined = {'f': dominancia_estocastica, 'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
+ejemplo3 = pydiversity(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_markets', params=params_defined)
+print(ejemplo3)
 
 
-    #Ejemplo 4: optimizer GridSearchCV
-    params_defined = {'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
-    ejemplo4 = pydiversity(strategy='WLBC', optimization='GridSearchCV', input_data='emerging_markets', params=params_defined)
-    print(ejemplo4)
+#Ejemplo 4: optimizer GridSearchCV
+params_defined = {'hp': {'lambda_value': ('cont', [0, 1]), 'lower_bound': ('cont', [0.1, 0.2])}, 'validation_windows':12}
+ejemplo4 = pydiversity(strategy='WLBC', optimization='GridSearchCV', input_data='emerging_markets', params=params_defined)
+print(ejemplo4)
 
-    print('FINISHED SUCCESSFULLY')
+print('FINISHED SUCCESSFULLY')
+"""
