@@ -4,3 +4,4 @@ theme: readthedocs
 
 nav:
   - Inicio: 'index.md'
+  - Mean-variance Formulation: 'mv_formulation.md'
