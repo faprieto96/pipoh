@@ -1,22 +1,22 @@
-# Diversification techniques for portfolio optimization
+# Performance evaluation metrics
 
 The diversification techniques includes in the library are eleven. The complete list is:
 
-### Equally weighted approaches
-1. Equally weighted (EW) or 1/N portfolios. 
+### Mean return (MR)
+1. Equally weighted (EW) or 1/N portfolios.
 2. Equally weighted risk contributions (EWRC).
 3. Maximum diversification (MD).
 
-### Controlling upper and lower bounds
+### Sharpe ratio (SR)
 4. Weighted upper bound constraints (WUBC).
 5. Weighted lower bound constraints (WLBC).
 
-### Cost function approaches
+### Calmar ratio (CR)
 6. Diversified mean-variance strategy (DMV).
 7. Diversified mean-variance strategy with yagger's entropy (DMVY).
 8. Equally weighted minium variance (EWMV).
 
-### Markowitz baseline formulation
+### Stability Index (SI)
 9. Global Maximum Return (GMR).
 10. Global Minimum Variance (GMV).
 

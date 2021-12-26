@@ -1,7 +1,10 @@
 site_name: Investment Portfolio
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  analytics: G-G9NK6H51HJ
 
 nav:
   - Inicio: 'index.md'
   - Mean-variance Formulation: 'mv_formulation.md'
+  - Evaluation metrics: 'performance_evaluation_metrics.md'
