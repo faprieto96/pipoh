@@ -28,7 +28,7 @@
 
 ## Introduction
 
-Pypoh is a library that implements several diversification techniques base on mean-variance framework. 
+Pipoh is a library that implements several diversification techniques base on mean-variance framework. 
 In addition, it includes a novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
 
 - [Diversification techniques for portfolio optimization:](https://github.com/faprieto96/pyInvestment/blob/master/docs/mv_formulation.md) 11 diversification and mean-variance strategies. 
@@ -36,7 +36,7 @@ In addition, it includes a novel purely data-driven methods for determining the 
 - [Datasets description:](https://github.com/faprieto96/pyInvestment) 10 datasets focused on different markets. 
 - [Performance evaluation metrics:](https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md) Includes 4 metrics such as Mean Return, Sharpe Ratio, ... 
 
-Pypoh is **extensive** and easily **extensible**, and it can be used to formulate your own strategies and use all capabilities of the library like hyper-parameters selection and evaluation metrics.
+Pipoh is **extensive** and easily **extensible**, and it can be used to formulate your own strategies and use all capabilities of the library like hyper-parameters selection and evaluation metrics.
 
 Pipoh has been conceived for different types of end-profiles.
 - Investors and serious investment practitioners.
