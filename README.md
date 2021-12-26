@@ -7,21 +7,12 @@
     <a href="https://www.python.org/">
         <img src="https://img.shields.io/badge/python-v3-brightgreen.svg"
             alt="python"></a> &nbsp;
-    <a href="https://pypi.org/project/PyPortfolioOpt/">
-        <img src="https://img.shields.io/badge/pypi-v1.5.1-brightgreen.svg"
+    <a href="https://pypi.org/project/Pipoh/">
+        <img src="https://img.shields.io/badge/pypi-v0.0.1-brightgreen.svg"
             alt="pypi"></a> &nbsp;
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"
-            alt="MIT license"></a> &nbsp;
-    <a href="https://github.com/robertmartin8/PyPortfolioOpt/actions">
-        <img src="https://github.com/robertmartin8/PyPortfolioOpt/workflows/pytest/badge.svg?event=push"
-            alt="build"></a> &nbsp;
-    <a href="https://pepy.tech/project/pyportfolioopt">
-        <img src="https://pepy.tech/badge/pyportfolioopt"
-            alt="downloads"></a> &nbsp;
-    <a href="https://mybinder.org/v2/gh/robertmartin8/pyportfolioopt/master/?filepath=cookbook">
-      <img src="https://mybinder.org/badge_logo.svg"
-            alt="binder"></a> &nbsp;
+            alt="MIT license"></a>
 </p>
 
 <!-- content -->
@@ -49,26 +40,6 @@ Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedo
 <img src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
 </center>
 
-## Table of contents
-
--   [Table of contents](#table-of-contents)
--   [Getting started](#getting-started)
-    -   [For development](#for-development)
--   [A quick example](#a-quick-example)
--   [An overview of classical portfolio optimization methods](#an-overview-of-classical-portfolio-optimization-methods)
--   [Features](#features)
-    -   [Expected returns](#expected-returns)
-    -   [Risk models (covariance)](#risk-models-covariance)
-    -   [Objective functions](#objective-functions)
-    -   [Adding constraints or different objectives](#adding-constraints-or-different-objectives)
-    -   [Black-Litterman allocation](#black-litterman-allocation)
-    -   [Other optimizers](#other-optimizers)
--   [Advantages over existing implementations](#advantages-over-existing-implementations)
--   [Project principles and design decisions](#project-principles-and-design-decisions)
--   [Testing](#testing)
--   [Citing PyPortfolioOpt](#citing-pyportfolioopt)
--   [Contributing](#contributing)
--   [Getting in touch](#getting-in-touch)
 
 ## Getting started
 
