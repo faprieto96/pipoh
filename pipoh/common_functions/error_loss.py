@@ -1,4 +1,4 @@
-from common_functions.rolling_windows_validation import rolling_windows_validation
+from pipoh.common_functions.rolling_windows_validation import rolling_windows_validation
 import numpy as np
 #from main import STRATEGY_SELECTED
 

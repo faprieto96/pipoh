@@ -1,10 +1,8 @@
 import numpy as np
-import sklearn as sk
-from sklearn.linear_model import LinearRegression, LassoLarsCV, RidgeCV
 from sklearn.base import BaseEstimator
 from sklearn.model_selection import GridSearchCV
 
-from common_functions.rolling_windows_validation import rolling_windows_validation
+from pipoh.common_functions.rolling_windows_validation import rolling_windows_validation
 
 class custom_gridsearch_cv(BaseEstimator):
 

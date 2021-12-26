@@ -1,7 +1,7 @@
-from concrete_factories.gscv_folder.gscv_strategies.gscv_wlbc import gscvWLBC
+from pipoh.concrete_factories.gscv_folder.gscv_strategies.gscv_wlbc import gscvWLBC
 
-from concrete_factories.gscv_folder.gscv_interface import InterfaceGSCV
-from strategies.class_wlbc import fnc_WLBC
+from pipoh.concrete_factories.gscv_folder.gscv_interface import InterfaceGSCV
+from pipoh.strategies.class_wlbc import fnc_WLBC
 
 class gscvWLBC(fnc_WLBC, InterfaceGSCV):
 

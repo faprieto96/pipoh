@@ -1,4 +1,4 @@
-from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
 
 
 class BayesianCustomStrategy(InterfaceBayesian):

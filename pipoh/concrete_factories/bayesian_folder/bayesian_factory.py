@@ -1,7 +1,7 @@
-from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_custom import BayesianCustomStrategy
-from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_ew import BayesianEW
-from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_wlbc import BayesianWLBC
-from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_wubc import BayesianWUBC
+from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_custom import BayesianCustomStrategy
+from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_ew import BayesianEW
+from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_wlbc import BayesianWLBC
+from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_wubc import BayesianWUBC
 
 
 class BayesianFactory:

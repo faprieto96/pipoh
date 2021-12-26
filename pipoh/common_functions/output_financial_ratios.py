@@ -1,6 +1,7 @@
 import numpy as np
+from abc import ABC, abstractmethod
 
-
+@abstractmethod
 def output_financial_ratios(ratios, returns, weights):
     # Save number of elements and number of assets
     n = max(returns.shape)

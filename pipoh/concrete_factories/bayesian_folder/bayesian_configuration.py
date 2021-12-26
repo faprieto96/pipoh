@@ -2,7 +2,7 @@ from pyGPGO.covfunc import squaredExponential
 from pyGPGO.acquisition import Acquisition
 from pyGPGO.surrogates.GaussianProcess import GaussianProcess
 from pyGPGO.GPGO import GPGO
-from common_functions.rolling_windows_validation import rolling_windows_validation
+from pipoh.common_functions.rolling_windows_validation import rolling_windows_validation
 import numpy as np
 
 

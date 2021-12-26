@@ -7,8 +7,8 @@ import numpy as np
 
 
 class Data:
-    emerging_markets = str(os.getcwd() + '/data_library/6_Emerging_Markets_8years.csv')
-    emerging_markets_2 = str(os.getcwd() + '/data_library/6_Emerging_Markets_8years.csv')
+    emerging_markets = str(os.getcwd() + '/pipoh/data_library/6_Emerging_Markets_8years.csv')
+    emerging_markets_2 = str(os.getcwd() + '/pipoh/data_library/6_Emerging_Markets_8years.csv')
 
     def __init__(self):
         ...

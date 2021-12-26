@@ -1,4 +1,4 @@
-from concrete_factories.non_parametric.non_parametric_strategies.ew import EW
+from pipoh.concrete_factories.non_parametric.non_parametric_strategies.ew import EW
 
 
 class NonParametricFactory:

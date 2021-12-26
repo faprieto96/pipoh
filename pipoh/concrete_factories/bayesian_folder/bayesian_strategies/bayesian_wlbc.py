@@ -7,8 +7,8 @@ from pyGPGO.surrogates.GaussianProcess import GaussianProcess
 from pyGPGO.GPGO import GPGO
 """
 
-from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
-from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_common_functions import test_fcn
+from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_common_functions import test_fcn
 import numpy as np
 from sklearn.covariance import EmpiricalCovariance
 from qpsolvers import solve_qp
