@@ -46,7 +46,7 @@ Pipoh has been conceived for different types of end-profiles.
 Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedocs.io/en/latest/)** to get an in-depth look at the project.
 
 <center>
-<img src="https://github.com/robertmartin8/PyPortfolioOpt/blob/master/media/conceptual_flowchart_v2.png?raw=true" style="width:100%;"/>
+<img src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
 </center>
 
 ## Table of contents
