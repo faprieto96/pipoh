@@ -26,27 +26,27 @@
 
 <!-- content -->
 
-Pypoh is a library that implements mean-variance optimization methods. This library includes:
+## Introduction
+
+Pypoh is a library that implements several diversification techniques base on mean-variance framework. 
+In addition, it includes a novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
 
 - [Diversification techniques for portfolio optimization:](https://github.com/faprieto96/pyInvestment/blob/master/docs/mv_formulation.md) 11 diversification and mean-variance strategies. 
 - [Hyper-parameters description:](https://github.com/faprieto96/pyInvestment) Data-driven method for determining the optimal value of the hyper-parameter associated with each eppoch. 
 - [Datasets description:](https://github.com/faprieto96/pyInvestment) 10 datasets focused on different markets. 
 - [Performance evaluation metrics:](https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md) Includes 4 metrics such as Mean Return, Sharpe Ratio, ... 
 
-Pypoh is a library that implements portfolio optimization methods, including
-classical mean-variance optimization techniques and Black-Litterman allocation, as well as more
-recent developments in the field like shrinkage and Hierarchical Risk Parity, along with
-some novel experimental features like exponentially-weighted covariance matrices.
+Pypoh is **extensive** and easily **extensible**, and it can be used to formulate your own strategies and use all capabilities of the library like hyper-parameters selection and evaluation metrics.
 
-It is **extensive** yet easily **extensible**, and can be useful for both the casual investor and the serious practitioner. Whether you are a fundamentals-oriented investor who has identified a
-handful of undervalued picks, or an algorithmic trader who has a basket of
-strategies, PyPortfolioOpt can help you combine your alpha sources
-in a risk-efficient way.
+Pipoh has been conceived for different types of end-profiles.
+- Investors and serious investment practitioners.
+- Students that want to take contact with mean-variance strategies.
+- Researchers that are looking for to desing, evaluate and test new strategies.
 
-Head over to the **[documentation on ReadTheDocs](https://pyportfolioopt.readthedocs.io/en/latest/)** to get an in-depth look at the project, or check out the [cookbook](https://github.com/robertmartin8/PyPortfolioOpt/tree/master/cookbook) to see some examples showing the full process from downloading data to building a portfolio.
+Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedocs.io/en/latest/)** to get an in-depth look at the project.
 
 <center>
-<img src="https://github.com/robertmartin8/PyPortfolioOpt/blob/master/media/conceptual_flowchart_v2.png?raw=true" style="width:70%;"/>
+<img src="https://github.com/robertmartin8/PyPortfolioOpt/blob/master/media/conceptual_flowchart_v2.png?raw=true" style="width:100%;"/>
 </center>
 
 ## Table of contents
