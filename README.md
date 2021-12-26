@@ -1,5 +1,5 @@
 <p align="center">
-    <img width=60% src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_logo.png?raw=true">
+    <img width=40% src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_logo.png?raw=true">
 </p>
 
 <!-- buttons -->
@@ -26,9 +26,14 @@
 
 <!-- content -->
 
-**PyPortfolioOpt has recently been [published](https://joss.theoj.org/papers/10.21105/joss.03066) in the Journal of Open Source Software 🎉**
+Pypoh is a library that implements mean-variance optimization methods. This library includes:
 
-PyPortfolioOpt is a library that implements portfolio optimization methods, including
+- [Diversification techniques for portfolio optimization:](https://github.com/faprieto96/pyInvestment/blob/master/docs/mv_formulation.md) 11 diversification and mean-variance strategies. 
+- [Hyper-parameters description:](https://github.com/faprieto96/pyInvestment) Data-driven method for determining the optimal value of the hyper-parameter associated with each eppoch. 
+- [Datasets description:](https://github.com/faprieto96/pyInvestment) 10 datasets focused on different markets. 
+- [Performance evaluation metrics:](https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md) Includes 4 metrics such as Mean Return, Sharpe Ratio, ... 
+
+Pypoh is a library that implements portfolio optimization methods, including
 classical mean-variance optimization techniques and Black-Litterman allocation, as well as more
 recent developments in the field like shrinkage and Hierarchical Risk Parity, along with
 some novel experimental features like exponentially-weighted covariance matrices.
@@ -382,7 +387,14 @@ Currently, the tests have not explored all of the edge cases and combinations
 of objective functions and parameters. However, each method and parameter has
 been tested to work as intended.
 
-## Citing PyPortfolioOpt
+## Citing Pipoh
+
+
+
+Pipoh methodology has been approved and peer reviewed by several scientist in the world. Articles related to this work can be checked in the following links.
+
+1. [published](https://joss.theoj.org/papers/10.21105/joss.03066)
+2. [published](https://joss.theoj.org/papers/10.21105/joss.03066)
 
 If you use PyPortfolioOpt for published work, please cite the [JOSS paper](https://joss.theoj.org/papers/10.21105/joss.03066).
 
