@@ -72,13 +72,6 @@ Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedo
 
 ## Getting started
 
-If you would like to play with PyPortfolioOpt interactively in your browser, you may launch Binder [here](https://mybinder.org/v2/gh/robertmartin8/pyportfolioopt/master). It takes a
-while to set up, but it lets you try out the cookbook recipes without having to deal with all of the requirements.
-
-_Note: macOS users will need to install [Command Line Tools](https://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)._
-
-_Note: if you are on windows, you first need to installl C++. ([download](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16), [install instructions](https://drive.google.com/file/d/0B4GsMXCRaSSIOWpYQkstajlYZ0tPVkNQSElmTWh1dXFaYkJr/view))_
-
 This project is available on PyPI, meaning that you can just:
 
 ```bash
