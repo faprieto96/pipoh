@@ -9,9 +9,8 @@ from pyGPGO.GPGO import GPGO
 import numpy as np
 
 from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
-from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_common_functions import test_fcn
 from sklearn.covariance import EmpiricalCovariance
-from qpsolvers import solve_qp
+#from qpsolvers import solve_qp
 
 
 class BayesianWUBC(InterfaceBayesian):
@@ -29,26 +28,6 @@ class BayesianWUBC(InterfaceBayesian):
         self.weights = []
         self.returns = []
         self.optim_param = {}
-
-    def get_dimensions(self):
-        return {
-            "Strategy Name": self.name,
-            "Lambda initial value": self.lamb,
-            "Upper bound limit initial value": self.upper_bound
-        }
-
-    def get_all_parameters(self):
-        return {
-            "Strategy Name": self.name,
-            "Lambda initial value": self.lamb,
-            "Upper bound limit initial value": self.upper_bound,
-            "CV windows": self.cv_windows
-        }
-
-    def get_hyper_parameters(self):
-
-        return test_fcn(self.lamb, self.delta)
-
 
     def solve_optimization_problem(self):
         # Type: It returns the optimized weights
@@ -88,7 +67,7 @@ class BayesianWUBC(InterfaceBayesian):
         ub = UB
 
         # (Wa, varP, third_parameter) = solve_qp(P, q, G, h, A, b)
-        W = np.array(solve_qp(P, q, G, h, A, b))
-        #W = np.ones((6, 1))
+        # W = np.array(solve_qp(P, q, G, h, A, b))
+        W = np.ones((6, 1))
 
         return W

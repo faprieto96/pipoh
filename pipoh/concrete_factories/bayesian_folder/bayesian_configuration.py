@@ -1,3 +1,4 @@
+from abc import abstractmethod
 from pyGPGO.covfunc import squaredExponential
 from pyGPGO.acquisition import Acquisition
 from pyGPGO.surrogates.GaussianProcess import GaussianProcess
@@ -6,28 +7,36 @@ from pipoh.common_functions.rolling_windows_validation import rolling_windows_va
 import numpy as np
 
 
+
+
 class InitialConfiguration:
     def initial_configuration(self, strategy, params=None):
+        if params != None and strategy != 'CustomStrategy':
+            param_hip = params
+            self.optim_param = params
 
         if params == None:
             if strategy == 'WUBC':
-                optim_param  = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1])}
+                (numElements, N) = self.data.shape
+                params = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [1/N, 1])}
             if strategy == 'WLBC':
-                optim_param  = {'lambda_value': ('cont', [0, 1]), 'lowerBound': ('cont', [0, 1])}
+                (numElements, N) = self.data.shape
+                params = {'lambda_value': ('cont', [0, 1]), 'upperBound': ('cont', [0, 1/N])}
+            if strategy == 'MV':
+                params = {'lambda_value': ('cont', [0, 1])}
+            if (strategy == 'DMV') or (strategy == 'DMVY') or (strategy == 'EWMV'):
+                params = {'lambda_value': ('cont', [0, 1]), 'delta_value': ('cont', [0, 1])}
             param_hip = params
             self.optim_param = params
 
         if strategy == 'CustomStrategy':
             for x, y in params.items():
-                if x!='f' and x!='hp':
+                if x != 'f' and x != 'hp':
                     exec('self.{}=params["{}"]'.format(x, x))
             param_hip = params['hp']
             self.optim_param = params['hp']
-
-        if params != None and strategy != 'CustomStrategy':
-            param_hip = params
-            self.optim_param = params
-
+            self.f = params.get('f')
+            self.args = params.get('args')
 
 
 
@@ -45,6 +54,12 @@ class InitialConfiguration:
             for x,y in kwards.items():
                 self.optim_param.setdefault(x,y)
                 self.values = kwards
+            try:
+                for x, y in self.values.items():
+                    if x != 'f' and x != 'hp':
+                        exec('self.{}=y'.format(x, x))
+            except:
+                pass
             rolling_windows_validation(self)
             value = np.std(self.returns) / self.returns.mean()
             return value

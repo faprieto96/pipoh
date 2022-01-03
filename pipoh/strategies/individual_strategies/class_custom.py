@@ -1,11 +1,14 @@
-from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+import numpy as np
+from sklearn.covariance import EmpiricalCovariance
+#from qpsolvers import solve_qp
 
+from abc import ABCMeta, abstractmethod, ABC
 
-class BayesianCustomStrategy(InterfaceBayesian):
-    #En el init poner los parametros que quiera
-    def __init__(self, params):
-        self.f = params.get('f')
-        self.args = params.get('args')
+class fnc_CUSTOM(ABC):
+    __metaclass__ = ABCMeta
+    # En el init poner los parametros que quiera
+    def __init__(self):
+        pass
 
     def get_dimensions(self):
         return 'ok'
@@ -23,6 +26,11 @@ class BayesianCustomStrategy(InterfaceBayesian):
                     exec('self.{}=y'.format(x, x))
         except:
             pass
+        try:
+            for x, y in self.values.items():
+                if x == 'f':
+                    exec('self.{}=y'.format(x, x))
+        except:
+            pass
         self.f(self)
         return 1
-

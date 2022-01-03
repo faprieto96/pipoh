@@ -1,6 +1,6 @@
 from pipoh.concrete_factories.non_parametric.non_parametric_interface import InterfaceNonParametric
 from pipoh.common_functions.rolling_windows_validation import rolling_windows_validation
-from pipoh.strategies.class_ew import fnc_EW
+from pipoh.strategies.individual_strategies.class_ew import fnc_EW
 
 
 class EW(fnc_EW, InterfaceNonParametric):

@@ -1,22 +1,12 @@
-"""A Class of Strategy"""
-
-"""
-from pyGPGO.covfunc import squaredExponential
-from pyGPGO.acquisition import Acquisition
-from pyGPGO.surrogates.GaussianProcess import GaussianProcess
-from pyGPGO.GPGO import GPGO
-"""
-
-from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
-from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_common_functions import test_fcn
 import numpy as np
 from sklearn.covariance import EmpiricalCovariance
-from qpsolvers import solve_qp
+#from qpsolvers import solve_qp
 
+from abc import ABCMeta, abstractmethod, ABC
 
-class BayesianWLBC(InterfaceBayesian):
-
-    def __init__(self, name='Weighted Upper Bound Constraint, WUBC', lamb=1, delta=1, upper_bound=1, lower_bound=0, validation_windows=36, cv_windows=12):
+class fnc_WLBC(ABC):
+    __metaclass__ = ABCMeta
+    def __init__(self, name='Weighted lower Bound Constraint, WUBC', lamb=1, delta=1, upper_bound=1, lower_bound=0, validation_windows=36, cv_windows=12) -> None:
         self.name = name
         self.lamb = lamb
         self.delta = delta
@@ -30,29 +20,14 @@ class BayesianWLBC(InterfaceBayesian):
         self.returns = []
         self.optim_param = {}
 
-    def get_dimensions(self):
-        return {
-            "Strategy Name": self.name,
-            "Lambda initial value": self.lamb,
-            "Upper bound limit initial value": self.upper_bound
-        }
-
-    def get_all_parameters(self):
-        return {
-            "Strategy Name": self.name,
-            "Lambda initial value": self.lamb,
-            "Upper bound limit initial value": self.upper_bound,
-            "CV windows": self.cv_windows
-        }
-
-    def get_hyper_parameters(self):
-
-        return test_fcn(self.lamb, self.delta)
-
-
+    @abstractmethod
     def solve_optimization_problem(self):
         # Type: It returns the optimized weights
         # Compute numbers of data points and assets
+        try:
+            self.optim_param = eval(self.optim_param)
+        except:
+            pass
         lambdaValue=self.optim_param.get('lambda_value')
         (numElements, N) = self.intermediate_data.shape
         # mean and covariance
@@ -88,7 +63,7 @@ class BayesianWLBC(InterfaceBayesian):
         ub = UB
 
         # (Wa, varP, third_parameter) = solve_qp(P, q, G, h, A, b)
-        W = np.array(solve_qp(P, q, G, h, A, b))
-        #W = np.ones((6, 1))
+        #W = np.array(solve_qp(P, q, G, h, A, b))
+        W = np.ones((6, 1))
 
         return W

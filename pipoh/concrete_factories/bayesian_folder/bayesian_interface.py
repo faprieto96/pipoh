@@ -4,7 +4,6 @@ from abc import ABCMeta, abstractmethod
 from pipoh.concrete_factories.bayesian_folder.bayesian_configuration import InitialConfiguration
 
 
-
 class InterfaceBayesian(InitialConfiguration, metaclass=ABCMeta):
     """The Chair Interface (Product)"""
 

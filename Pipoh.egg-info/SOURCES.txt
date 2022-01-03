@@ -5,6 +5,7 @@ Pipoh.egg-info/SOURCES.txt
 Pipoh.egg-info/dependency_links.txt
 Pipoh.egg-info/top_level.txt
 pipoh/__init__.py
+pipoh/main.py
 pipoh/Parents/__init__.py
 pipoh/Parents/interface_strategy_factory.py
 pipoh/Parents/strategy_factory.py

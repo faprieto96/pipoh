@@ -4,7 +4,6 @@ from abc import ABCMeta, abstractmethod
 from pipoh.concrete_factories.gscv_folder.gscv_configuration import InitialConfiguration
 
 
-
 class InterfaceGSCV(InitialConfiguration, metaclass=ABCMeta):
     """The Chair Interface (Product)"""
 
