@@ -1,5 +1,4 @@
-from pipoh.concrete_factories.non_parametric.non_parametric_strategies.ew import EW
-
+from pipoh.strategies.non_parametric_agrupacion_estrategias import *
 
 class NonParametricFactory:
 
@@ -8,7 +7,13 @@ class NonParametricFactory:
         """A static method to get a chair"""
         try:
             if strategy_selected == 'EW':
-                return EW()
+                return non_parameteric_EW()
+            if strategy_selected == 'GMR':
+                return non_parameteric_GMR()
+            if strategy_selected == 'GMV':
+                return non_parameteric_GMV()
+            if strategy_selected == 'CustomStrategy':
+                return non_parameteric_CUSTOM()
             raise Exception('Strategy not found')
         except Exception as _e:
             print(_e)
