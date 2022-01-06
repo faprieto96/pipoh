@@ -1,10 +1,10 @@
 # Fichero que contiene la agrupación de todas las estrategias.
 
-from pipoh.strategies.individual_strategies.class_ew import fnc_EW
-from pipoh.strategies.individual_strategies.class_ew import fnc_EW
-from pipoh.strategies.individual_strategies.class_gmr import fnc_GMR
-from pipoh.strategies.individual_strategies.class_gmv import fnc_GMV
-from pipoh.strategies.individual_strategies.class_custom import fnc_CUSTOM
+from strategies.individual_strategies.class_ew import fnc_EW
+from strategies.individual_strategies.class_ew import fnc_EW
+from strategies.individual_strategies.class_gmr import fnc_GMR
+from strategies.individual_strategies.class_gmv import fnc_GMV
+from strategies.individual_strategies.class_custom import fnc_CUSTOM
 
 # Se importan las funciones, dentro de la clase que ejecutará.
 # Es el método común de importar todas las funciones a partir de un fichero común de python.

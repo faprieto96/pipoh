@@ -1,7 +1,7 @@
 # pylint: disable=too-few-public-methods
 """The Bayesian Interface"""
 from abc import ABCMeta, abstractmethod
-from pipoh.concrete_factories.gscv_folder.gscv_configuration import InitialConfiguration
+from concrete_factories.gscv_folder.gscv_configuration import InitialConfiguration
 
 
 class InterfaceGSCV(InitialConfiguration, metaclass=ABCMeta):

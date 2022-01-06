@@ -1,5 +1,5 @@
-from pipoh.concrete_factories.bayesian_folder.bayesian_strategies.bayesian_custom import BayesianCustomStrategy
-from pipoh.strategies.bayesian_agrupacion_estrategias import *
+from concrete_factories.bayesian_folder.bayesian_strategies.bayesian_custom import BayesianCustomStrategy
+from strategies.bayesian_agrupacion_estrategias import *
 
 class BayesianFactory:
     """The Factory Class"""

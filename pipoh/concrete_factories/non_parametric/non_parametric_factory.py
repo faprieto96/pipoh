@@ -1,4 +1,4 @@
-from pipoh.strategies.non_parametric_agrupacion_estrategias import *
+from strategies.non_parametric_agrupacion_estrategias import *
 
 class NonParametricFactory:
 

@@ -1,4 +1,4 @@
-from pipoh.concrete_factories.gscv_folder.gscv_interface import InterfaceGSCV
+from concrete_factories.gscv_folder.gscv_interface import InterfaceGSCV
 
 
 class gscvCustomStrategy(InterfaceGSCV):

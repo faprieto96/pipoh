@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.covariance import EmpiricalCovariance
-#from qpsolvers import solve_qp
+from qpsolvers import solve_qp
 
 from abc import ABCMeta, abstractmethod, ABC
 
@@ -34,10 +34,8 @@ class fnc_WLBC(ABC):
         assert np.count_nonzero(np.isnan(self.intermediate_data)) == 0
         if len(self.intermediate_data)==0:
             pass
-        try:
-            Sigma = EmpiricalCovariance().fit(self.intermediate_data).covariance_ * 12  # I use 12 for annualizing the covmatrix
-        except:
-            pass
+
+        Sigma = np.cov(self.intermediate_data, rowvar=False)* 12  # I use 12 for annualizing the covmatrix
         Vars = np.diag(Sigma)  # variances of the stocks
         mu = self.intermediate_data.mean(axis=0).H * 12  # mean log returns
 
@@ -46,24 +44,25 @@ class fnc_WLBC(ABC):
         lowerBoundValue = self.lower_bound
         # lowerBoundValue = 0
         H = 2 * (lambdaValue * Sigma)
-        f = - mu.H  # FALTA TRANSPOSE
+        f = - mu.H
 
-        Aeq = np.ones((1, N))
-        beq = 1
-        LB = np.ones((1, N))* lowerBoundValue
-        UB = np.ones((1, N))
+        if len(f)==0:
+            try:
+                q_p = np.asarray(f).reshape((6,))
+            except:
+                q_p = np.zeros((1, N)).reshape((6,))
+        if len(f)>0:
+            q_p = np.array(- mu.H)[0]
 
-        P = H
-        q = np.asarray(f).reshape((6,))
-        G = np.zeros((6, 6))
-        h = np.zeros(6)
-        A = np.asarray(Aeq).reshape((6,))
-        b = np.array([beq])
-        lb = LB
-        ub = UB
+        Aeq = np.ones((1, N)).reshape(6)
+        beq = np.array(1)
+        LB = (np.ones((1, N))* lowerBoundValue)[0]
+        UB = np.ones((1, N)).reshape(6,)
 
-        # (Wa, varP, third_parameter) = solve_qp(P, q, G, h, A, b)
-        #W = np.array(solve_qp(P, q, G, h, A, b))
-        W = np.ones((6, 1))
+        # Python reference for quadprog:
+        #   https://pypi.org/project/qpsolvers/
+        # Original funct (it contains opts) (Wa, varP)  = solve_qp(H,f,[],[],Aeq,beq,LB,UB,UB/N,opts)
+
+        W=np.asarray(solve_qp(P = H, q = q_p, G = None, h = None, A = Aeq, b = beq, lb = LB, ub = UB))
 
         return W

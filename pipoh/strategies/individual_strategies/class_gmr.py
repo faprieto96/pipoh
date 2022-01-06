@@ -24,10 +24,10 @@ class fnc_GMR(ABC):
         (numElements, N) = self.intermediate_data.shape
         # Compute the mean return
         # meanReturn  =
-        meanReturn = np.asarray(np.cumsum((np.mean(self.intermediate_data.shape, axis=0)), axis=0))[0]
+        meanReturn = self.intermediate_data.mean(axis=0)
         # Global maximun return approach
         ValueMax = meanReturn.max()
-        indexMax = np.where(meanReturn == meanReturn.max())[0][0]
+        indexMax = list(np.where(meanReturn == meanReturn.max()))[1][0]
         W = np.zeros((N, 1))
         W[[indexMax]] = 1
 

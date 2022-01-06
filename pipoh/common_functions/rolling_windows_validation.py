@@ -8,7 +8,7 @@ def rolling_windows_validation(STRATEGY_SELECTED):
     # Initialize the weights matrix
     W = np.zeros((STRATEGY_SELECTED.validation_windows, N))
 
-    for i in range(1, STRATEGY_SELECTED.validation_windows):
+    for i in range(0, STRATEGY_SELECTED.validation_windows):
         STRATEGY_SELECTED.intermediate_data = STRATEGY_SELECTED.data[i:numData-STRATEGY_SELECTED.validation_windows + i,:]
         # Comprobación de que el array no sea cero.
         assert np.count_nonzero(np.isnan(STRATEGY_SELECTED.intermediate_data)) == 0

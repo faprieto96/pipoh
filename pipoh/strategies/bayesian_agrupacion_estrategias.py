@@ -1,13 +1,12 @@
 # Fichero que contiene la agrupación de todas las estrategias.
-from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
-
-from pipoh.strategies.individual_strategies.class_wlbc import fnc_WLBC
-from pipoh.strategies.individual_strategies.class_wubc import fnc_WUBC
-from pipoh.strategies.individual_strategies.class_mv import fnc_MV
-from pipoh.strategies.individual_strategies.class_dmv import fnc_DMV
-from pipoh.strategies.individual_strategies.class_dmvy import fnc_DMVY
-from pipoh.strategies.individual_strategies.class_ewmv import fnc_EWMV
-from pipoh.strategies.individual_strategies.class_custom import fnc_CUSTOM
+from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+from strategies.individual_strategies.class_wlbc import fnc_WLBC
+from strategies.individual_strategies.class_wubc import fnc_WUBC
+from strategies.individual_strategies.class_mv import fnc_MV
+from strategies.individual_strategies.class_dmv import fnc_DMV
+from strategies.individual_strategies.class_dmvy import fnc_DMVY
+from strategies.individual_strategies.class_ewmv import fnc_EWMV
+from strategies.individual_strategies.class_custom import fnc_CUSTOM
 
 # Se importan las funciones, dentro de la clase que ejecutará.
 # Es el método común de importar todas las funciones a partir de un fichero común de python.

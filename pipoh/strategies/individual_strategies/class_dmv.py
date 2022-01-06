@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.covariance import EmpiricalCovariance
-#from qpsolvers import solve_qp
+from qpsolvers import solve_qp
 
 from abc import ABCMeta, abstractmethod, ABC
 
@@ -26,8 +26,7 @@ class fnc_DMV(ABC):
         (numElements, N) = self.intermediate_data.shape
         # mean and covariance
         try:
-            Sigma = EmpiricalCovariance().fit(
-                self.intermediate_data).covariance_ * 12  # I use 12 for annualizing the covmatrix
+            Sigma = np.cov(self.intermediate_data, rowvar=False)* 12  # I use 12 for annualizing the covmatrix
         except:
             pass
         Vars = np.diag(Sigma)  # variances of the stocks
@@ -59,36 +58,25 @@ class fnc_DMV(ABC):
                 deltaValue = self.optim_param.get('delta_value')
 
         H = 2 * (lambdaValue * Sigma + deltaValue * np.eye(N))
-        f = - mu
+        f = - mu.H
 
-        Aeq = np.ones((1, N))
-        beq = 1
-        LB = np.zeros((1, N))
-        UB = np.ones((1, N))
-        # opts    = optimset('Algorithm', 'interior-point-convex', 'Display','off')
-        #   Revisar cómo meter la opción de 'interior-point-convex'
+        if len(f)==0:
+            try:
+                q_p = np.asarray(f).reshape((6,))
+            except:
+                q_p = np.zeros((1, N)).reshape((6,))
+        if len(f)>0:
+            q_p = np.array(f)[0]
+
+        Aeq = np.ones((1, N)).reshape(6)
+        beq = np.array(1)
+        LB = np.zeros((1, N))[0]
+        UB = np.ones((1, N)).reshape(6,)
 
         # Python reference for quadprog:
         #   https://pypi.org/project/qpsolvers/
         # Original funct (it contains opts) (Wa, varP)  = solve_qp(H,f,[],[],Aeq,beq,LB,UB,UB/N,opts)
 
-        P = H
-        q = np.asarray(f).reshape((6,))
-        G = np.zeros((6, 6))
-        h = np.zeros(6)
-        A = np.asarray(Aeq).reshape((6,))
-        b = np.array([beq])
-        lb = LB
-        ub = UB
-
-
-        #W = np.array(solve_qp(P, q, G, h, A, b))
-
-        W = np.ones((6, 1))
+        W=np.asarray(solve_qp(P = H, q = q_p, G = None, h = None, A = Aeq, b = beq, lb = LB, ub = UB))
 
         return W
-
-
-
-
-

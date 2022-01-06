@@ -18,24 +18,22 @@ def max_drawdown(STRATEGY_SELECTED):
     cr = np.cumsum((np.asarray(STRATEGY_SELECTED.returns)).flatten(), axis=0)
     # calculate drawdown vector
     dd = []
-    for i in range(1, n):
-        dd.append(max(cr[0:i]) - cr[i - 1])
+    for i in range(0, n):
+        if i == 0:
+            dd.append(cr[i]- cr[i])
+        if i>0:
+            dd.append(max(cr[0:i]) - cr[i])
     dd = np.array(dd)
 
     # calculate maximum drawdown statistics
     MDD = max(dd)
     MDDe = np.where(dd == MDD)[0][0]
-    try:
-        MDDs = np.where(abs(cr[MDDe] + MDD - cr) < 0.000001)[0][0]
-    except:
-        MDDs = 0
-    try:
-        MDDr = np.where(MDDe + min(cr[MDDe:] >= cr[MDDs]))[0] - 1
-    except:
-        try:
-            MDDr = np.where(MDDe + min(cr >= cr[MDDs]))[0] - 1
-        except:
-            MDDr = []
+    MDDs = np.where(abs(cr[MDDe] + MDD - cr) < 0.000001)[0][0]
+    if len(np.where(cr[MDDe:] >= cr[MDDs])[0])==0:
+        MDDr = MDDe -1
+    if len(np.where(cr[MDDe:] >= cr[MDDs])[0])>0:
+        MDDr = MDDe + min(np.where(cr[MDDe:] >= cr[MDDs])) - 1
+
     ratios = {}
     ratios['MDD'] = MDD
     ratios['MDDs'] = MDDs

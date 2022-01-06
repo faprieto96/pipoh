@@ -1,8 +1,8 @@
-from pipoh.Parents.strategy_factory import StrategyFactory
-from pipoh.common_functions.rolling_windows_validation import rolling_windows_validation
-from pipoh.common_functions.max_drawdown import max_drawdown
-from pipoh.common_functions.output_financial_ratios import output_financial_ratios
-from pipoh.common_functions.data_import import Data
+from Parents.strategy_factory import StrategyFactory
+from common_functions.rolling_windows_validation import rolling_windows_validation
+from common_functions.max_drawdown import max_drawdown
+from common_functions.output_financial_ratios import output_financial_ratios
+from common_functions.data_import import Data
 
 #Desactivate warnings
 import sys
@@ -40,44 +40,48 @@ def pipoh(strategy: str, input_data: callable, optimization:str = None, params =
 #"""
 #Ejemplo 1: Sin método de optimización de hiper-parámetros
 
-ejemplo0 = pipoh(strategy='EW', input_data='/Users/franciscoantonioprietorodriguez/Documents/Git_repositories/pyInvestment/pipoh/data_library/6_Emerging_Markets_8years.csv')
+ejemplo1_1 = pipoh(strategy='EW', input_data='/Users/franciscoantonioprietorodriguez/Documents/Git_repositories/pyInvestment/pipoh/data_library/6_Emerging_Markets_8years.csv')
+print(ejemplo1_1)
 
-ejemplo1 = pipoh(strategy='EW', input_data='emerging_markets')
-print(ejemplo1)
-
-# Ejemplo 1: Sin método de optimización de hiper-parámetros
-ejemplo1 = pipoh(strategy='GMR', input_data='emerging_markets')
-print(ejemplo1)
+ejemplo1_2 = pipoh(strategy='EW', input_data='emerging_markets')
+print(ejemplo1_2)
 
 # Ejemplo 1: Sin método de optimización de hiper-parámetros
-ejemplo1 = pipoh(strategy='GMV', input_data='emerging_markets')
-print(ejemplo1)
+ejemplo1_3 = pipoh(strategy='GMR', input_data='emerging_markets')
+print(ejemplo1_3)
 
+# Ejemplo 1: Sin método de optimización de hiper-parámetros
+ejemplo1_4 = pipoh(strategy='GMV', input_data='emerging_markets')
+print(ejemplo1_4)
 
 #Ejemplo 2.1: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2_1 = pipoh(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets')
-print(ejemplo2_1)
+ejemplo_2_1 = pipoh(strategy='WLBC', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_1)
 
 # Ejemplo 2.2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2_2 = pipoh(strategy='MV', optimization='Bayesian', input_data='emerging_markets')
-print(ejemplo2_2)
+ejemplo_2_2 = pipoh(strategy='MV', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_2)
 
 # Ejemplo 2.3: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2_3 = pipoh(strategy='DMV', optimization='Bayesian', input_data='emerging_markets')
-print(ejemplo2_3)
+ejemplo_2_3 = pipoh(strategy='DMV', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_3)
 
 # Ejemplo 2.4: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2_4 = pipoh(strategy='DMVY', optimization='Bayesian', input_data='emerging_markets')
-print(ejemplo2_4)
-
-# Ejemplo 2.5: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2_5 = pipoh(strategy='EWMV', optimization='Bayesian', input_data='emerging_markets')
-print(ejemplo2_5)
-
+ejemplo_2_4 = pipoh(strategy='DMVY', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_4)
 
 #Ejemplo 2.2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo2 = pipoh(strategy='WUBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0.5, 1]), 'lower_bound': ('cont', [0.8, 1])})
-print(ejemplo2)
+ejemplo_2_5 = pipoh(strategy='WUBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0, 1]), 'upper_bound': ('cont', [0, 1])})
+print(ejemplo_2_5)
+
+# Ejemplo 2.5: Incluyendo optimización de hyper-parámetros a través del método bayesiano
+ejemplo_2_6 = pipoh(strategy='EWMV', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_6)
+
+ejemplo_2_7= pipoh(strategy='EWMV', optimization='Bayesian', input_data='emerging_markets')
+print(ejemplo_2_7)
+
+
 
 
 #Ejemplo 3: Incluyendo una función externa

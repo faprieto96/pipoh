@@ -1,8 +1,8 @@
 """Abstract Strategy Factory"""
-from pipoh.Parents.interface_strategy_factory import InterfaceStrategyFactory
-from pipoh.concrete_factories.bayesian_folder.bayesian_factory import BayesianFactory
-from pipoh.concrete_factories.non_parametric.non_parametric_factory import NonParametricFactory
-from pipoh.concrete_factories.gscv_folder.gscv_factory import gscvFactory
+from Parents.interface_strategy_factory import InterfaceStrategyFactory
+from concrete_factories.bayesian_folder.bayesian_factory import BayesianFactory
+from concrete_factories.non_parametric.non_parametric_factory import NonParametricFactory
+from concrete_factories.gscv_folder.gscv_factory import gscvFactory
 
 # Modificar y poner o 1) Clases y sino 2) sets.
 list_non_parametric_strategies = ['GMR', 'GMV', 'EW', 'EWRC', 'MD']

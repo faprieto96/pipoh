@@ -1,4 +1,4 @@
-from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
 import numpy as np
 
 

@@ -8,7 +8,7 @@ from pyGPGO.GPGO import GPGO
 """
 import numpy as np
 
-from pipoh.concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
+from concrete_factories.bayesian_folder.bayesian_interface import InterfaceBayesian
 from sklearn.covariance import EmpiricalCovariance
 #from qpsolvers import solve_qp
 

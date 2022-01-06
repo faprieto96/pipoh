@@ -1,4 +1,4 @@
-from pipoh.strategies.gscv_agrupacion_estrategias import *
+from strategies.gscv_agrupacion_estrategias import *
 
 
 class gscvFactory:
