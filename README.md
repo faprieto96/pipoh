@@ -19,7 +19,8 @@
 
 ## Introduction
 
-Pipoh is a library that implements several diversification techniques base on mean-variance framework. 
+Pipoh is a library that implements several diversification techniques base on mean-variance framework.  The well-known MV portfolio framework is based under the assumption that a rational investor wants to maximize their returns and minimize the risk associated with the portfolio.
+
 In addition, it includes a novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
 
 - [Diversification techniques for portfolio optimization:](https://github.com/faprieto96/pyInvestment/blob/master/docs/mv_formulation.md) 11 diversification and mean-variance strategies. 
