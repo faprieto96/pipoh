@@ -8,9 +8,23 @@ The baseline theory assumes that the means and covariances of the underlying ass
 Markowitz’s optimization problem determines, for a portfolio consisting of 𝑁 assets (𝑛 = 1,…,𝑁), the optimal weights of the portfolio’s value invested in each asset,
 
 .. math:: 
-- :math:`E(R)` is a Nx1 vector of expected returns, where *N* is the number of assets.
 
+:math:`E(R)` is a Nx1 vector of expected returns, where *N* is the number of assets.
+`(\sum_{𝑛=1} ^{N}`
 $$𝑤_1,…,𝑤_𝑁 (\sum_{𝑛=1} ^{N} 𝑤_𝑛 = 1)$$
+
+.. math::
+
+    \begin{equation*}
+    \begin{aligned}
+    & \underset{w}{\text{maximise}} & & w^T \mu \\
+    & \text{subject to} & & n^T n \leq s^*  \\
+    &&& B w - p + n = 0 \\
+    &&& w^T \mathbf{1} = 1 \\
+    &&& n \geq 0 \\
+    &&& p \geq 0. \\
+    \end{aligned}
+    \end{equation*}
 
 using as the inputs of the problem the expected returns (𝜇𝑛), risks (𝜎𝑛) and covariances between the assets (𝜎𝑛𝑚) (Kalayci et al., 2019; Markowitz, 1952). For ease of reference, the portfolio mean and variance are mathematically expressed as follows:
 
