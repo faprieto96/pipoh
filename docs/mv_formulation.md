@@ -26,12 +26,14 @@ Because of the above-mentioned information, it may be stated that the mean–var
 
 **** !!!!!!! NO QUIERO PONER TODA LA FORMULACIÓN, POR LO QUE DEBERÍAMOS HACER UNA INTRO Y YA ENTRAR EN LA FORMULACIÓN DE LAS ESTRATEGIAS *****
 
-The diversification techniques includes in the library are eleven. The complete list is:
+The diversification techniques includes in the library are:
 
-### Equally weighted approaches
+### [Equally weighted approaches](https://github.com/faprieto96/pipoh/blob/master/docs/mv_formulation_ew_approaches.md)
 1. Equally weighted (EW) or 1/N portfolios.
 2. Equally weighted risk contributions (EWRC).
 3. Maximum diversification (MD).
+
+
 
 ### Controlling upper and lower bounds
 4. Weighted upper bound constraints (WUBC).
