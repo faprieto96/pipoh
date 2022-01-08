@@ -8,6 +8,7 @@ PyInvestment is a library that implements mean-variance optimization methods. Th
 - Data-driven method for determining the optimal value of the hyper-parameter associated with each eppoch. [Hyper-parameters description.](https://github.com/faprieto96/pyInvestment)
 - 10 datasets focused on different markets. [Datasets description.](https://github.com/faprieto96/pyInvestment)
 
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.

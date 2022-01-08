@@ -5,6 +5,18 @@ theme:
   analytics: G-G9NK6H51HJ
 
 nav:
-  - Inicio: 'index.md'
-  - Mean-variance Formulation: 'mv_formulation.md'
-  - Evaluation metrics: 'performance_evaluation_metrics.md'
+  - Introduction: 'index.md'
+  - Tutorials: '02_tutorials/index_tutorials.md'
+  - Mean-variance Strategies: '03_mv_formulation_files/index_mv_formulation.md'
+  - Optimizers: '04_Optimizers/index_hyper_parameters.md'
+  - Performance evaluation metrics: '05_performance_evaluation_metrics/index_performance_evaluation_metrics.md'
+  - Other information: '06_other_information/index_other_information.md'
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - javascripts/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+    - mdx_math
