@@ -34,7 +34,9 @@ def pipoh(strategy: str, input_data: callable, optimization:str = None, params =
     # 4. Maxdrawdown function
     STRATEGY_SELECTED.ratios = max_drawdown(STRATEGY_SELECTED)
     # 5. Output financial ratios
-    STRATEGY_SELECTED.output_financial_summary = output_financial_ratios(STRATEGY_SELECTED.ratios, STRATEGY_SELECTED.returns, STRATEGY_SELECTED.weights)
+    STRATEGY_SELECTED.output_financial_summary = output_financial_ratios(STRATEGY_SELECTED)
+
+    #En la parte del return, se podría incluir una nueva función que generase algo tipo report.
     return STRATEGY_SELECTED.output_financial_summary
 
 #"""
