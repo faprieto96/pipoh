@@ -123,12 +123,11 @@ pipoh(strategy='CustomStrategy', optimization='Bayesian', input_data='emerging_m
 
 ```txt
 Evaluation 	 Proposed point 	  Current eval. 	 Best eval.
-init   	 [0.70285662 0.10066641]. 	  10.537387371579229 	 10.537387371579229
-init   	 [0.68027651 0.17786081]. 	  10.537387371579229 	 10.537387371579229
-init   	 [0.04832844 0.17557546]. 	  10.537387371579229 	 10.537387371579229
-1      	 [0.36779647 0.1       ]. 	  10.537387371579229 	 10.537387371579229
-
-{'MR': -0.052464162446658, 'SR': -0.008629148194608617, 'CR': -0.001272997846970887, 'Turnover': 0.11224602119519797}
+init   	 [0.16350618 0.16670019]. 	  7.530597410893871 	 7.530597410893871
+init   	 [0.53640884 0.13407134]. 	  7.530597410893871 	 7.530597410893871
+init   	 [0.70007243 0.18761661]. 	  7.530597410893871 	 7.530597410893871
+1      	 [0.41013578 0.2       ]. 	  7.530597410893871 	 7.530597410893871
+{'Mean Return': 6.076666666666665, 'Share Ratio': 0.1327915894897509, 'Calmar Ratio': 0.03640902736169362, 'Colog Ratio': 0.0029018551134198343, 'MiniMax ratio': 1.1969796454366382, 'Turnover': 0.0}
 ```
 
 _Disclaimer: nothing about this project constitues investment advice, and the author bears no responsibiltiy for your subsequent investment decisions. Please refer to the [license](https://github.com/faprieto96/pipoh/blob/master/license.txt) for more information._
