@@ -98,17 +98,17 @@ pipoh(strategy='WLBC',
 ```
 
 ```txt
-Evaluation 	 Proposed point 	  Current eval. 	 Best eval.
-init   	 [0.62894893 0.90305801]. 	  -96.13552128609001 	 -96.13552128609001
-init   	 [0.56036721 0.97370589]. 	  -96.13552128609001 	 -96.13552128609001
-init   	 [0.54432336 0.8144007 ]. 	  -96.13552128609001 	 -96.13552128609001
-1      	 [1. 1.]. 	  -96.13552128609001 	 -96.13552128609001
-
-{'MR': -0.052464162446658, 'SR': -0.008629148194608617, 'CR': -0.001272997846970887, 'Turnover': 0.11224602119519797}
+# Performance evaluation metrics
+Evaluation       Proposed point           Current eval.          Best eval.
+init     [0.52384733 0.09224026].         43.88902890653751      43.88902890653751
+init     [0.62067801 0.08772509].         43.88902890653751      43.88902890653751
+init     [0.63399604 0.00299079].         43.88902890653751      43.88902890653751
+1        [0.56996903 0.03656443].         43.88902890653751      43.88902890653751
+{'Mean Return': 0.12893810329370484, 'Share Ratio': 0.022784737436991786, 'Calmar Ratio': 0.003331248264446595, 'Colog Ratio': 0.004026306008939107, 'MiniMax ratio': 1.0000000000000002, 'Turnover': 0.0398582808840518}
 ```
 
 
-### Third case: User defines the strategy function
+### Third case: An user defines a customized strategy function.
 
 ```python
 def dominancia_estocastica(self):
@@ -132,7 +132,7 @@ init   	 [0.04832844 0.17557546]. 	  10.537387371579229 	 10.537387371579229
 {'MR': -0.052464162446658, 'SR': -0.008629148194608617, 'CR': -0.001272997846970887, 'Turnover': 0.11224602119519797}
 ```
 
-_Disclaimer: nothing about this project constitues investment advice, and the author bears no responsibiltiy for your subsequent investment decisions. Please refer to the [license](https://github.com/robertmartin8/PyPortfolioOpt/blob/master/LICENSE.txt) for more information._
+_Disclaimer: nothing about this project constitues investment advice, and the author bears no responsibiltiy for your subsequent investment decisions. Please refer to the [license](https://github.com/faprieto96/pipoh/blob/master/license.txt) for more information._
 
 
 ## Project principles and design decisions
@@ -154,7 +154,6 @@ _Disclaimer: nothing about this project constitues investment advice, and the au
 Pipoh methodology has been approved and peer reviewed by several scientist in the world. Articles related to this work can be checked in the following links.
 
 1. [Mean Squared Variance Portfolio: A Mixed-Integer Linear Programming Formulation](http://dx.doi.org/10.3390/math9030223)
-2. [Publication link](https://joss.theoj.org/papers/10.21105/joss.03066)
 
 If you use Pipoh for published work, please cite above works. Citations string:
 
@@ -164,7 +163,7 @@ If you use Pipoh for published work, please cite above works. Citations string:
 
 ## Contributing
 
-Contributions are _most welcome_. Have a look at the [Contribution Guide](https://github.com/robertmartin8/PyPortfolioOpt/blob/master/CONTRIBUTING.md) for more.
+Contributions are _most welcome_. 
 
 I'd like to thank all of the people who have contributed to pipoh since its release in 2021.
 Special shout-outs to:
