@@ -104,7 +104,9 @@ init     [0.52384733 0.09224026].         43.88902890653751      43.889028906537
 init     [0.62067801 0.08772509].         43.88902890653751      43.88902890653751
 init     [0.63399604 0.00299079].         43.88902890653751      43.88902890653751
 1        [0.56996903 0.03656443].         43.88902890653751      43.88902890653751
-{'Mean Return': 0.12893810329370484, 'Share Ratio': 0.022784737436991786, 'Calmar Ratio': 0.003331248264446595, 'Colog Ratio': 0.004026306008939107, 'MiniMax ratio': 1.0000000000000002, 'Turnover': 0.0398582808840518}
+{'Mean Return': 0.12893810329370484, 'Share Ratio': 0.022784737436991786, 
+'Calmar Ratio': 0.003331248264446595, 'Colog Ratio': 0.004026306008939107, 
+'MiniMax ratio': 1.0000000000000002, 'Turnover': 0.0398582808840518}
 ```
 
 
@@ -127,7 +129,9 @@ init   	 [0.16350618 0.16670019]. 	  7.530597410893871 	 7.530597410893871
 init   	 [0.53640884 0.13407134]. 	  7.530597410893871 	 7.530597410893871
 init   	 [0.70007243 0.18761661]. 	  7.530597410893871 	 7.530597410893871
 1      	 [0.41013578 0.2       ]. 	  7.530597410893871 	 7.530597410893871
-{'Mean Return': 6.076666666666665, 'Share Ratio': 0.1327915894897509, 'Calmar Ratio': 0.03640902736169362, 'Colog Ratio': 0.0029018551134198343, 'MiniMax ratio': 1.1969796454366382, 'Turnover': 0.0}
+{'Mean Return': 6.076666666666665, 'Share Ratio': 0.1327915894897509, 
+'Calmar Ratio': 0.03640902736169362, 'Colog Ratio': 0.0029018551134198343, 
+'MiniMax ratio': 1.1969796454366382, 'Turnover': 0.0}
 ```
 
 _Disclaimer: nothing about this project constitues investment advice, and the author bears no responsibiltiy for your subsequent investment decisions. Please refer to the [license](https://github.com/faprieto96/pipoh/blob/master/license.txt) for more information._
