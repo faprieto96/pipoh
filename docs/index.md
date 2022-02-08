@@ -113,7 +113,6 @@ init     [0.63399604 0.00299079].         43.88902890653751      43.889028906537
 ```python
 def dominancia_estocastica(self):
     lambdaValue = self.lambda_value
-    # lambdaValue = 0.886
     upperBoundValue = self.lower_bound
     return lambdaValue+upperBoundValue
 
