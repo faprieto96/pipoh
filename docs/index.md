@@ -147,7 +147,7 @@ _Disclaimer: nothing about this project constitues investment advice, and the au
     I have deferred **all** formatting decisions to [Black](https://github.com/ambv/black).
 
 
-## Citing Pipoh
+## Citing Pipoh and related work.
 
 Pipoh methodology has been approved and peer reviewed by several scientist in the world. Articles related to this work can be checked in the following links.
 
