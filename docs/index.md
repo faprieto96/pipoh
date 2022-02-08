@@ -22,12 +22,13 @@
 
 Pipoh is a library that implements several diversification techniques base on mean-variance framework.  The well-known MV portfolio framework is based under the assumption that a rational investor wants to maximize their returns and minimize the risk associated with the portfolio.
 
-In addition, it includes a novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
+In addition, it includes novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
 
+Main of the capabilities included in Pipoh are:
 - [Diversification techniques for portfolio optimization:](03_mv_formulation_files/index_mv_formulation.md) 11 diversification and mean-variance strategies. 
 - [Hyper-parameters description:](https://github.com/faprieto96/pyInvestment) Data-driven method for determining the optimal value of the hyper-parameter associated with each eppoch. 
 - [Datasets description:](https://github.com/faprieto96/pyInvestment) 10 datasets focused on different markets. 
-- [Performance evaluation metrics:](https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md) Includes 4 metrics such as Mean Return, Sharpe Ratio, ... 
+- [Performance evaluation metrics:](https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md) Includes 6 performance metrics.
 
 Pipoh is **extensive** and easily **extensible**, and it can be used to formulate your own strategies and use all capabilities of the library like hyper-parameters selection and evaluation metrics.
 
@@ -36,7 +37,7 @@ Pipoh has been conceived for different types of end-profiles.
 - Students that want to take contact with mean-variance strategies.
 - Researchers that are looking for to desing, evaluate and test new strategies.
 
-Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedocs.io/en/latest/)** to get an in-depth look at the project.
+Head over to the **[documentation on ReadTheDocs](https://pipoh.readthedocs.io/en/latest/)** to get an in-depth look at the project.
 
 <center>
 <img src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
@@ -45,13 +46,11 @@ Head over to the **[documentation on ReadTheDocs](https://pyinvestment.readthedo
 
 ## Getting started
 
-This project is available on PyPI, meaning that you can just:
+This project is available on PyPI, meaning that you work with Pipoh just running the following command:
 
 ```bash
 pip install pipoh
 ```
-
-For more information, please read [this guide](https://docker-curriculum.com/#introduction).
 
 ### For development
 
@@ -65,7 +64,9 @@ git clone https://github.com/faprieto96/pipoh
 
 ## Quick examples
 
-### First example: The user runs the Equally Weighted strategy that does not requires an optimization of the parameters.
+### First example: Running an Equally Weighted Strategy without optimization.
+
+An user wants to run the *Equally Weighted strategy* with the dataset of Emerging Markets. This strategy does not requires an optimization of its parameters.
 
 ```python
 import pipoh
@@ -74,16 +75,20 @@ import pipoh
 pipoh(strategy='EW', input_data='emerging_markets')
 ```
 
-This outputs the following weights:
+By default, Pipoh library will return the performance metrics:
 
 ```txt
-{'MR': -0.052464162446658, 
-'SR': -0.008629148194608617, 
-'CR': -0.001272997846970887, 
-'Turnover': 0.11224602119519797}
+{'Mean Return': 0.2538425925925927, 
+'Share Ratio': 0.04657430634672944, 
+'Calmar Ratio': 0.007121075161565159, 
+'Colog Ratio': 0.008545319323776479, 
+'MiniMax ratio': 2.9118428040361115, 
+'Turnover': 0.0}
 ```
 
-### Second case: User optimizes the hyper-parameters with the Bayesian optimization.
+### Second case: Running an Weighted Lower Bound Constraint Strategy with an optimization of its hyper-parameters.
+
+User optimizes the hyper-parameters with the Bayesian optimization.
 
 ```python
 pipoh(strategy='WLBC', 
