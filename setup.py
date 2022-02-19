@@ -10,7 +10,7 @@ except(IOError, ImportError):
 
 setuptools.setup(
     name='Pipoh',
-    version="0.0.3",
+    version="0.1.0",
     author = 'Francisco A. Prieto Rodriguez, Francisco de Asís Fernández Navarro, David Becerra Alonso',
     description = long_description,
     long_description_content_type= 'text/markdown',
