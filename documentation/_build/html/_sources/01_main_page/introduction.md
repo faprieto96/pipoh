@@ -1,6 +1,6 @@
 # Welcome to pyInvestment
 <p align="center">
-    <img width=40% src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_logo.png?raw=true">
+    <img width=40% src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_logo_name.png">
 </p>
 
 <!-- buttons -->
@@ -56,6 +56,7 @@ it probably makes sense to clone this repository and to just use the source code
 ```bash
 git clone https://github.com/faprieto96/pipoh
 ```
+
 
 
 ## Quick examples
