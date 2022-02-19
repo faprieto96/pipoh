@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to pyInvestment &#8212; Pipoh documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/pipoh_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Pipoh documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Welcome to pyInvestment
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/01_main_page/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_main_page/README.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#welcome">
+   Welcome
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting started
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-development">
+     For development
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-examples">
+   Quick examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-example-running-an-equally-weighted-strategy-without-optimization">
+     First example: Running an Equally Weighted Strategy without optimization.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#second-case-running-an-weighted-lower-bound-constraint-strategy-with-an-optimization-of-its-hyper-parameters">
+     Second case: Running an Weighted Lower Bound Constraint Strategy with an optimization of its hyper-parameters.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#third-case-an-user-defines-a-customized-strategy-function">
+     Third case: An user defines a customized strategy function.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-principles-and-design-decisions">
+   Project principles and design decisions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-pipoh-and-related-work">
+   Citing Pipoh and related work.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing">
+   Contributing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-in-touch">
+   Getting in touch
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-pyinvestment">
+<h1>Welcome to pyInvestment<a class="headerlink" href="#welcome-to-pyinvestment" title="Permalink to this headline">¶</a></h1>
+<p align="center">
+    <img width=40% src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_logo.png?raw=true">
+</p>
+<!-- buttons -->
+<p align="center">
+    <a href="https://www.python.org/">
+        <img src="https://img.shields.io/badge/python-v3-brightgreen.svg"
+            alt="python"></a> &nbsp;
+    <a href="https://pypi.org/project/Pipoh/">
+        <img src="https://img.shields.io/badge/pypi-v0.0.1-brightgreen.svg"
+            alt="pypi"></a> &nbsp;
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"
+            alt="MIT license"></a>
+</p>
+<!-- content -->
+<div class="section" id="welcome">
+<h2>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h2>
+<p>Pipoh is a library that implements several diversification techniques base on mean-variance framework.  The well-known MV portfolio framework is based under the assumption that a rational investor wants to maximize their returns and minimize the risk associated with the portfolio.</p>
+<p>In addition, it includes novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like <strong>Bayesian Optimization</strong> or <strong>Random Grid Search</strong>.</p>
+<p>Main of the capabilities included in Pipoh are:</p>
+<ul class="simple">
+<li><p><span class="xref myst">Diversification techniques for portfolio optimization:</span> 11 diversification and mean-variance strategies.</p></li>
+<li><p><a class="reference external" href="https://github.com/faprieto96/pyInvestment">Hyper-parameters description:</a> Data-driven method for determining the optimal value of the hyper-parameter associated with each eppoch.</p></li>
+<li><p><a class="reference external" href="https://github.com/faprieto96/pyInvestment">Datasets description:</a> 10 datasets focused on different markets.</p></li>
+<li><p><a class="reference external" href="https://github.com/faprieto96/pyInvestment/blob/master/docs/performance_evaluation_metrics.md">Performance evaluation metrics:</a> Includes 6 performance metrics.</p></li>
+</ul>
+<p>Pipoh is <strong>extensive</strong> and easily <strong>extensible</strong>, and it can be used to formulate your own strategies and use all capabilities of the library like hyper-parameters selection and evaluation metrics.</p>
+<p>Pipoh has been conceived for different types of end-profiles.</p>
+<ul class="simple">
+<li><p>Investors and serious investment practitioners.</p></li>
+<li><p>Students that want to take contact with mean-variance strategies.</p></li>
+<li><p>Researchers that are looking for to desing, evaluate and test new strategies.</p></li>
+</ul>
+<p>Head over to the <strong><a class="reference external" href="https://pipoh.readthedocs.io/en/latest/">documentation on ReadTheDocs</a></strong> to get an in-depth look at the project.</p>
+<center>
+<img src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
+</center>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>This project is available on PyPI, meaning that you work with Pipoh just running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pipoh
+</pre></div>
+</div>
+<div class="section" id="for-development">
+<h3>For development<a class="headerlink" href="#for-development" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to make major changes to integrate this with your proprietary system,
+it probably makes sense to clone this repository and to just use the source code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/faprieto96/pipoh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quick-examples">
+<h2>Quick examples<a class="headerlink" href="#quick-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-example-running-an-equally-weighted-strategy-without-optimization">
+<h3>First example: Running an Equally Weighted Strategy without optimization.<a class="headerlink" href="#first-example-running-an-equally-weighted-strategy-without-optimization" title="Permalink to this headline">¶</a></h3>
+<p>An user wants to run the <em>Equally Weighted strategy</em> with the dataset of Emerging Markets. This strategy does not requires an optimization of its parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pipoh</span>
+
+<span class="c1"># Equally weighted strategy with dataset of emerging_markets</span>
+<span class="n">pipoh</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;EW&#39;</span><span class="p">,</span> <span class="n">input_data</span><span class="o">=</span><span class="s1">&#39;emerging_markets&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>By default, Pipoh library will return the performance metrics:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>{&#39;Mean Return&#39;: 0.2538425925925927, 
+&#39;Share Ratio&#39;: 0.04657430634672944, 
+&#39;Calmar Ratio&#39;: 0.007121075161565159, 
+&#39;Colog Ratio&#39;: 0.008545319323776479, 
+&#39;MiniMax ratio&#39;: 2.9118428040361115, 
+&#39;Turnover&#39;: 0.0}
+</pre></div>
+</div>
+</div>
+<div class="section" id="second-case-running-an-weighted-lower-bound-constraint-strategy-with-an-optimization-of-its-hyper-parameters">
+<h3>Second case: Running an Weighted Lower Bound Constraint Strategy with an optimization of its hyper-parameters.<a class="headerlink" href="#second-case-running-an-weighted-lower-bound-constraint-strategy-with-an-optimization-of-its-hyper-parameters" title="Permalink to this headline">¶</a></h3>
+<p>User optimizes the hyper-parameters with the Bayesian optimization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pipoh</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;WLBC&#39;</span><span class="p">,</span> 
+      <span class="n">optimization</span><span class="o">=</span><span class="s1">&#39;Bayesian&#39;</span><span class="p">,</span> 
+      <span class="n">input_data</span><span class="o">=</span><span class="s1">&#39;emerging_markets&#39;</span><span class="p">,</span> 
+      <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;lamb&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;cont&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;cont&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])})</span>
+</pre></div>
+</div>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span># Performance evaluation metrics
+Evaluation       Proposed point           Current eval.          Best eval.
+init     [0.52384733 0.09224026].         43.88902890653751      43.88902890653751
+init     [0.62067801 0.08772509].         43.88902890653751      43.88902890653751
+init     [0.63399604 0.00299079].         43.88902890653751      43.88902890653751
+1        [0.56996903 0.03656443].         43.88902890653751      43.88902890653751
+{&#39;Mean Return&#39;: 0.12893810329370484, &#39;Share Ratio&#39;: 0.022784737436991786, 
+&#39;Calmar Ratio&#39;: 0.003331248264446595, &#39;Colog Ratio&#39;: 0.004026306008939107, 
+&#39;MiniMax ratio&#39;: 1.0000000000000002, &#39;Turnover&#39;: 0.0398582808840518}
+</pre></div>
+</div>
+</div>
+<div class="section" id="third-case-an-user-defines-a-customized-strategy-function">
+<h3>Third case: An user defines a customized strategy function.<a class="headerlink" href="#third-case-an-user-defines-a-customized-strategy-function" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dominancia_estocastica</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">lambdaValue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lambda_value</span>
+    <span class="n">upperBoundValue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lower_bound</span>
+    <span class="k">return</span> <span class="n">lambdaValue</span><span class="o">+</span><span class="n">upperBoundValue</span>
+
+<span class="n">params_defined</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="n">dominancia_estocastica</span><span class="p">,</span> <span class="s1">&#39;hp&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lambda_value&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;cont&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;lower_bound&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;cont&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])},</span> <span class="s1">&#39;validation_windows&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span>
+
+<span class="n">pipoh</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;CustomStrategy&#39;</span><span class="p">,</span> <span class="n">optimization</span><span class="o">=</span><span class="s1">&#39;Bayesian&#39;</span><span class="p">,</span> <span class="n">input_data</span><span class="o">=</span><span class="s1">&#39;emerging_markets&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params_defined</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Evaluation 	 Proposed point 	  Current eval. 	 Best eval.
+init   	 [0.16350618 0.16670019]. 	  7.530597410893871 	 7.530597410893871
+init   	 [0.53640884 0.13407134]. 	  7.530597410893871 	 7.530597410893871
+init   	 [0.70007243 0.18761661]. 	  7.530597410893871 	 7.530597410893871
+1      	 [0.41013578 0.2       ]. 	  7.530597410893871 	 7.530597410893871
+{&#39;Mean Return&#39;: 6.076666666666665, &#39;Share Ratio&#39;: 0.1327915894897509, 
+&#39;Calmar Ratio&#39;: 0.03640902736169362, &#39;Colog Ratio&#39;: 0.0029018551134198343, 
+&#39;MiniMax ratio&#39;: 1.1969796454366382, &#39;Turnover&#39;: 0.0}
+</pre></div>
+</div>
+<p><em>Disclaimer: nothing about this project constitues investment advice, and the author bears no responsibiltiy for your subsequent investment decisions. Please refer to the <a class="reference external" href="https://github.com/faprieto96/pipoh/blob/master/license.txt">license</a> for more information.</em></p>
+</div>
+</div>
+<div class="section" id="project-principles-and-design-decisions">
+<h2>Project principles and design decisions<a class="headerlink" href="#project-principles-and-design-decisions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>It should be easy to swap out individual components of the optimization process
+with the user’s proprietary improvements.</p></li>
+<li><p>Usability is everything: it is better to be self-explanatory than consistent.</p></li>
+<li><p>There is no point in portfolio optimization unless it can be practically
+applied to real asset prices.</p></li>
+<li><p>Everything that has been implemented should be tested.</p></li>
+<li><p>Inline documentation is good: dedicated (separate) documentation is better.
+The two are not mutually exclusive.</p></li>
+<li><p>Formatting should never get in the way of coding: because of this,
+I have deferred <strong>all</strong> formatting decisions to <a class="reference external" href="https://github.com/ambv/black">Black</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="citing-pipoh-and-related-work">
+<h2>Citing Pipoh and related work.<a class="headerlink" href="#citing-pipoh-and-related-work" title="Permalink to this headline">¶</a></h2>
+<p>Pipoh methodology has been approved and peer reviewed by several scientist in the world. Articles related to this work can be checked in the following links.</p>
+<ol class="simple">
+<li><p><a class="reference external" href="http://dx.doi.org/10.3390/math9030223">Mean Squared Variance Portfolio: A Mixed-Integer Linear Programming Formulation</a></p></li>
+</ol>
+<p>If you use Pipoh for published work, please cite above works. Citations string:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. Fernández-Navarro, F., Martínez-Nieto, L., Carbonero-Ruz, M., &amp; Montero-Romero, T. (2021). Mean squared variance portfolio: A mixed-integer linear programming formulation. Mathematics, 9(3), http://dx.doi.org/10.3390/math9030223
+</pre></div>
+</div>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>Contributions are <em>most welcome</em>.</p>
+<p>I’d like to thank all of the people who have contributed to pipoh since its release in 2021.
+Special shout-outs to:</p>
+<ul class="simple">
+<li><p>Francisco de Asís Fernández Navarro</p></li>
+<li><p>David Becerra Alonso</p></li>
+</ul>
+</div>
+<div class="section" id="getting-in-touch">
+<h2>Getting in touch<a class="headerlink" href="#getting-in-touch" title="Permalink to this headline">¶</a></h2>
+<p>If you are having a problem with pipoh, please raise a GitHub issue.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_main_page"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Francisco Prieto Rodriguez<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
