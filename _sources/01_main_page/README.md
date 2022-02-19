@@ -1,4 +1,4 @@
-# Welcome to pyInvestment
+# Welcome to Pipoh
 <p align="center">
     <img width=40% src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_logo.png?raw=true">
 </p>
