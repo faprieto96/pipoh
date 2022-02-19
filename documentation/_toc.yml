@@ -2,7 +2,21 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
+root: 01_main_page/introduction
+parts:
+  - caption: Tutorial
+    chapters:
+    - file: 02_tutorials/index_tutorials
+  - caption: Mean-Variance formulation
+    chapters:
+    - file: 03_mv_formulation_files/index_mv_formulation
+    - file: 03_mv_formulation_files/mv_formulation_ew_approaches
+  - caption: Optimizers
+    chapters:
+    - file: 04_Optimizers/index_hyper_parameters
+  - caption: Performance evaluation metrics
+    chapters:
+    - file: 05_performance_evaluation_metrics/index_performance_evaluation_metrics
+  - caption: Other information
+    chapters:
+    - file: 06_other_information/index_other_information

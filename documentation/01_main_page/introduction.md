@@ -1,4 +1,20 @@
-# Welcome to Pipoh
+# Welcome to pyInvestment
+<p align="center">
+    <img width=40% src="https://github.com/faprieto96/pyInvestment/blob/master/documentation/images/pipoh_logo.png?raw=true">
+</p>
+
+<!-- buttons -->
+<p align="center">
+    <a href="https://www.python.org/">
+        <img src="https://img.shields.io/badge/python-v3-brightgreen.svg"
+            alt="python"></a> &nbsp;
+    <a href="https://pypi.org/project/Pipoh/">
+        <img src="https://img.shields.io/badge/pypi-v0.0.1-brightgreen.svg"
+            alt="pypi"></a> &nbsp;
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"
+            alt="MIT license"></a>
+</p>
 
 Pipoh is a library that implements several diversification techniques base on mean-variance framework.  The well-known MV portfolio framework is based under the assumption that a rational investor wants to maximize their returns and minimize the risk associated with the portfolio.
 
