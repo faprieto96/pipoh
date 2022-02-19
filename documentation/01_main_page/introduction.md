@@ -1,6 +1,6 @@
 # Welcome to pyInvestment
 <p align="center">
-    <img width=40% src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_logo_name.png">
+    <img width=40% src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_logo.png">
 </p>
 
 <!-- buttons -->
