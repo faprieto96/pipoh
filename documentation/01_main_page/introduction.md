@@ -58,6 +58,7 @@ git clone https://github.com/faprieto96/pipoh
 ```
 
 
+
 ## Quick examples
 
 ### First example: Running an Equally Weighted Strategy without optimization.
