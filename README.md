@@ -37,10 +37,10 @@ Pipoh has been conceived for different types of end-profiles.
 - Students that want to take contact with mean-variance strategies.
 - Researchers that are looking for to desing, evaluate and test new strategies.
 
-Head over to the **[documentation on ReadTheDocs](https://pipoh.readthedocs.io/en/latest/)** to get an in-depth look at the project.
+Head over to the **[Official Documentation](https://faprieto96.github.io/pipoh/intro.html)** to get an in-depth look at the project.
 
 <center>
-<img src="https://github.com/faprieto96/pyInvestment/blob/master/docs/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
+<img src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_architecture.png?raw=true" style="width:100%;"/>
 </center>
 
 
