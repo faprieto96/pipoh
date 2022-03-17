@@ -22,7 +22,7 @@
 
 Pipoh is a library that implements several diversification techniques base on mean-variance framework.  The well-known MV portfolio framework is based under the assumption that a rational investor wants to maximize their returns and minimize the risk associated with the portfolio.
 
-In addition, it includes novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**. 
+In addition, it includes novel purely data-driven methods for determining the optimal value of the hyper-parameters associated with each investment strategy like **Bayesian Optimization** or **Random Grid Search**.
 
 Main of the capabilities included in Pipoh are:
 - [Diversification techniques for portfolio optimization:](03_mv_formulation_files/index_mv_formulation.md) 11 diversification and mean-variance strategies. 
