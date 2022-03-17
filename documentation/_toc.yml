@@ -6,9 +6,9 @@ root: 01_main_page/introduction
 parts:
   - caption: Tutorial
     chapters:
-    - file: 02_tutorials/installation
-    - file: 02_tutorials/introduction_normal
-    - file: 02_tutorials/experts
+    - file: 02_tutorials/02_01_installation
+    - file: 02_tutorials/02_02_introduction_normal
+    - file: 02_tutorials/02_03_experts
   - caption: Mean-Variance formulation
     chapters:
     - file: 03_mv_formulation_files/index_mv_formulation

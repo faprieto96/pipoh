@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equally weighted approaches &#8212; Official documentation</title>
+    <title>Introduction &#8212; Official documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,6 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hyper-parameters" href="../04_Optimizers/index_hyper_parameters.html" />
-    <link rel="prev" title="Diversification techniques for portfolio optimization" href="index_mv_formulation.html" />
+    <link rel="next" title="Introduction" href="02_03_experts.html" />
+    <link rel="prev" title="Installation" href="02_01_installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,20 +101,20 @@
   Tutorial
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_tutorials/installation.html">
+  <a class="reference internal" href="02_01_installation.html">
    Installation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02_tutorials/introduction_normal.html">
-   introduction_normal
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_tutorials/experts.html">
-   Experts
+  <a class="reference internal" href="02_03_experts.html">
+   Introduction
   </a>
  </li>
 </ul>
@@ -125,14 +123,14 @@
   Mean-Variance formulation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="index_mv_formulation.html">
+  <a class="reference internal" href="../03_mv_formulation_files/index_mv_formulation.html">
    Diversification techniques for portfolio optimization
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_mv_formulation_files/mv_formulation_ew_approaches.html">
    Equally weighted approaches
   </a>
  </li>
@@ -213,7 +211,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/03_mv_formulation_files/mv_formulation_ew_approaches.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/02_tutorials/02_02_introduction_normal.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -233,7 +231,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/faprieto96/pipoh/tree/gh-pages/issues/new?title=Issue%20on%20page%20%2F03_mv_formulation_files/mv_formulation_ew_approaches.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/faprieto96/pipoh/tree/gh-pages/issues/new?title=Issue%20on%20page%20%2F02_tutorials/02_02_introduction_normal.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -254,29 +252,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenido
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equally-weighted-ew-or-1-n-portfolios">
-   1. Equally weighted (EW) or 1/N portfolios.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equally-weighted-risk-contributions-ewrc">
-   2. Equally weighted risk contributions (EWRC).
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maximum-diversification-md">
-   3. Maximum Diversification (MD).
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -285,51 +260,9 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="equally-weighted-approaches">
-<h1>Equally weighted approaches<a class="headerlink" href="#equally-weighted-approaches" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>Equally weighted (EW) or 1/N portfolios.</p></li>
-<li><p>Equally weighted risk contributions (EWRC).</p></li>
-<li><p>Maximum diversification (MD).</p></li>
-</ol>
-<div class="section" id="equally-weighted-ew-or-1-n-portfolios">
-<h2>1. Equally weighted (EW) or 1/N portfolios.<a class="headerlink" href="#equally-weighted-ew-or-1-n-portfolios" title="Permalink to this headline">¶</a></h2>
-<p>Optimal portfolios tend to be excessively concentrated in a limited subset of the full set of assets.</p>
-<p>Optimal mean–variance (MV) portfolios generally tend to be excessively concentrated in a limited subset of the full set of assets (portfolio concentration). A simple and naive way to solve this problem is to attribute the same weight to all the assets included in the portfolio. Equally weighted (EW) or <span class="math notranslate nohighlight">\(1/N\)</span> portfolios are widely used in the literature.</p>
-<p>The main advantages of the 1∕𝑁 naive approach are that it does not need to estimate the moments of asset returns or optimize a particular objective function with constraints.</p>
-<p>The main drawback of the <span class="math notranslate nohighlight">\(1∕𝑁\)</span> rule is that it leads to very limited diversification of risks if individual risks are significantly different.</p>
-</div>
-<div class="section" id="equally-weighted-risk-contributions-ewrc">
-<h2>2. Equally weighted risk contributions (EWRC).<a class="headerlink" href="#equally-weighted-risk-contributions-ewrc" title="Permalink to this headline">¶</a></h2>
-<p>Risk parity is an approach that overcomes the previously mentioned limitation of the 1∕𝑁 rule by focusing on the allocation of risk rather than on the allocation of capital. The best-known version of risk parity is the equally weighted risk contributions (EWRC) portfolio method. This method quantifies the (total) risk contribution of the 𝑛th asset, taking into account the partial derivative of the risk function with respect to the weight of the <span class="math notranslate nohighlight">\(n^{th}\)</span> asset:</p>
-<div class="math notranslate nohighlight">
-\[
-w_n \times \partial_{w_n}
-(\sum_{n,m=1} ^{N} w_n w_m \sigma_{nm})
-=
-w_n \times \frac{w_n \sigma_n ^2 + \sum_{n \neq m}} {\sum_{n,m=1} ^{N} w_n w_m \sigma_{nm}}
-\varpropto w_n \times (\sum w)_n
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sum\)</span>  <span class="math notranslate nohighlight">\(\epsilon\)</span> <span class="math notranslate nohighlight">\(\Re^{N \times N}\)</span> is the covariance matrix, <span class="math notranslate nohighlight">\(w = (w_1,...,w_N)\)</span> <span class="math notranslate nohighlight">\(\epsilon\)</span> <span class="math notranslate nohighlight">\(\Re^{N}\)</span> the vector of weights and <span class="math notranslate nohighlight">\((\sum_w)_n\)</span> the <span class="math notranslate nohighlight">\(n^{th}\)</span> row of the vector of the matrix obtained from the product of <span class="math notranslate nohighlight">\(\sum\)</span> with <span class="math notranslate nohighlight">\(w\)</span>. Equal risk contribution then
-means that <span class="math notranslate nohighlight">\(w_n \times (\sum_w)_n = w_m \times (\sum_w)_m\)</span> for all <span class="math notranslate nohighlight">\(n,m\)</span>.</p>
-</div>
-<div class="section" id="maximum-diversification-md">
-<h2>3. Maximum Diversification (MD).<a class="headerlink" href="#maximum-diversification-md" title="Permalink to this headline">¶</a></h2>
-<p>It should be noted that the EWRC strategy is inspired by the maximum diversification (MD) technique, which maximizes the following diversification ratio.</p>
-<div class="math notranslate nohighlight">
-\[
-max_{w_1,...w_N}
-\frac {\sum_{n=1}^N w_n \sigma_{nn}} {\sum_{n,m=1}^N w_n w_m \sigma n_m}
-\]</div>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-s.t.\\\sum_{n=1}^N w_n = 1
-\end{aligned}\end{align} \]</div>
-<div class="math notranslate nohighlight">
-\[
-w_1, ..., w_N \geq 0
-\]</div>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Mathematically speaking, the MV portfolio framework is a quadratic optimization problem where an efficient frontier is composed of all combination assets that obtain the maximum return with the minimum risk. Return and risk are estimated through past price series, using the expected value and variance, respectively.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -345,7 +278,7 @@ w_1, ..., w_N \geq 0
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./03_mv_formulation_files"
+            path: "./02_tutorials"
         },
         predefinedOutput: true
     }
@@ -357,17 +290,17 @@ w_1, ..., w_N \geq 0
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="index_mv_formulation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_01_installation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Diversification techniques for portfolio optimization</p>
+            <p class="prev-next-title">Installation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../04_Optimizers/index_hyper_parameters.html" title="next page">
+    <a class='right-next' id="next-link" href="02_03_experts.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hyper-parameters</p>
+        <p class="prev-next-title">Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
