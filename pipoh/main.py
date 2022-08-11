@@ -73,8 +73,8 @@ ejemplo_2_4 = pipoh(strategy='DMVY', optimization='Bayesian', input_data='emergi
 print(ejemplo_2_4)
 
 #Ejemplo 2.2: Incluyendo optimización de hyper-parámetros a través del método bayesiano
-ejemplo_2_5 = pipoh(strategy='WUBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0, 1]), 'upper_bound': ('cont', [0, 1])})
-print(ejemplo_2_5)
+"""ejemplo_2_5 = pipoh(strategy='WUBC', optimization='Bayesian', input_data='emerging_markets', params={'lamb': ('cont', [0, 1]), 'upper_bound': ('cont', [0, 1])})
+print(ejemplo_2_5)"""
 
 # Ejemplo 2.5: Incluyendo optimización de hyper-parámetros a través del método bayesiano
 ejemplo_2_6 = pipoh(strategy='EWMV', optimization='Bayesian', input_data='emerging_markets')

@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Equally weighted approaches" href="mv_formulation_ew_approaches.html" />
-    <link rel="prev" title="Tutorials" href="../02_tutorials/index_tutorials.html" />
+    <link rel="prev" title="Design your custom strategy" href="../02_tutorials/02_03_experts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,8 +105,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_tutorials/index_tutorials.html">
-   Tutorials
+  <a class="reference internal" href="../02_tutorials/02_01_installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_tutorials/02_02_introduction_normal.html">
+   First steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_tutorials/02_03_experts.html">
+   Design your custom strategy
   </a>
  </li>
 </ul>
@@ -287,23 +297,9 @@
 <p>Mathematically speaking, the MV portfolio framework is a quadratic optimization problem where an efficient frontier is composed of all combination assets that obtain the maximum return with the minimum risk. Return and risk are estimated through past price series, using the expected value and variance, respectively.</p>
 <p>The baseline theory assumes that the means and covariances of the underlying asset returns are known.</p>
 <p>Markowitz’s optimization problem determines, for a portfolio consisting of 𝑁 assets (𝑛 = 1,…,𝑁), the optimal weights of the portfolio’s value invested in each asset,</p>
-<p>.. math::</p>
-<p>:math:<code class="docutils literal notranslate"><span class="pre">E(R)</span></code> is a Nx1 vector of expected returns, where <em>N</em> is the number of assets.
+<p><code class="docutils literal notranslate"><span class="pre">E(R)</span></code> is a Nx1 vector of expected returns, where <em>N</em> is the number of assets.
 <code class="docutils literal notranslate"><span class="pre">(\sum_{𝑛=1}</span> <span class="pre">^{N}</span></code>
 $<span class="math notranslate nohighlight">\(𝑤_1,…,𝑤_𝑁 (\sum_{𝑛=1} ^{N} 𝑤_𝑛 = 1)\)</span>$</p>
-<p>.. math::</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\begin{equation*}
-\begin{aligned}
-&amp; \underset{w}{\text{maximise}} &amp; &amp; w^T \mu \\
-&amp; \text{subject to} &amp; &amp; n^T n \leq s^*  \\
-&amp;&amp;&amp; B w - p + n = 0 \\
-&amp;&amp;&amp; w^T \mathbf{1} = 1 \\
-&amp;&amp;&amp; n \geq 0 \\
-&amp;&amp;&amp; p \geq 0. \\
-\end{aligned}
-\end{equation*}
-</pre></div>
-</div>
 <p>using as the inputs of the problem the expected returns (𝜇𝑛), risks (𝜎𝑛) and covariances between the assets (𝜎𝑛𝑚) (Kalayci et al., 2019; Markowitz, 1952). For ease of reference, the portfolio mean and variance are mathematically expressed as follows:</p>
 <div class="math notranslate nohighlight">
 \[(\sum_{n=1} ^{N} w_N + \mu_n)\]</div>
@@ -375,11 +371,11 @@ $<span class="math notranslate nohighlight">\(\sum_{n=1} ^{N} w_N =1\)</span><sp
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../02_tutorials/index_tutorials.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../02_tutorials/02_03_experts.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorials</p>
+            <p class="prev-next-title">Design your custom strategy</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="mv_formulation_ew_approaches.html" title="next page">

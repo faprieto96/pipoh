@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -103,8 +105,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../02_tutorials/index_tutorials.html">
-   Tutorials
+  <a class="reference internal" href="../02_tutorials/02_01_installation.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_tutorials/02_02_introduction_normal.html">
+   First steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_tutorials/02_03_experts.html">
+   Design your custom strategy
   </a>
  </li>
 </ul>
@@ -293,15 +305,33 @@
 <p>Pipoh includes six performance measures that were computed for each technique. First three performance measures considered as input the time series of out-of-sample returns. The fourth was computed using the matrix of portfolio weights. Last two considers…</p>
 <div class="section" id="mean-return-mr">
 <h2>Mean return (MR)<a class="headerlink" href="#mean-return-mr" title="Permalink to this headline">¶</a></h2>
+<p>Mean returns attempt to quantify the relationship between the risk of a portfolio of securities and its return. It assumes that while investors have different risk tolerances, rational investors will always seek the maximum rate of return (RoR) for every level of acceptable risk.</p>
+<div class="math notranslate nohighlight">
+\[
+max_{w_1,...w_N}
+\frac {\sum_{n=1}^N w_n \sigma_{nn}} {\sum_{n,m=1}^N w_n w_m \sigma n_m}
+\]</div>
 </div>
 <div class="section" id="sharpe-ratio-sr">
 <h2>Sharpe ratio (SR)<a class="headerlink" href="#sharpe-ratio-sr" title="Permalink to this headline">¶</a></h2>
+<p>Named after American economist, William Sharpe, the Sharpe Ratio (or Sharpe Index or Modified Sharpe Ratio) is commonly used to gauge the performance of an investment by adjusting for its risk.</p>
+<p>The higher the ratio, the greater the investment return relative to the amount of risk taken, and thus, the better the investment. The ratio can be used to evaluate a single stock or investment, or an entire portfolio.</p>
+<div class="math notranslate nohighlight">
+\[Sharpe Ratio = (Rx – Rf) / StdDev Rx\]</div>
+<p>Where:</p>
+<p><span class="math notranslate nohighlight">\(Rx\)</span> = Expected portfolio return</p>
+<p><span class="math notranslate nohighlight">\(Rf\)</span> = Risk-free rate of return</p>
+<p><span class="math notranslate nohighlight">\(StdDev Rx\)</span> = Standard deviation of portfolio return (or, volatility)</p>
 </div>
 <div class="section" id="calmar-ratio-cr">
 <h2>Calmar ratio (CR)<a class="headerlink" href="#calmar-ratio-cr" title="Permalink to this headline">¶</a></h2>
+<p>Calmar ratio refer to ratio of average annual rate to return to risk related to investments as it shows the relationship between return and risk and it is calculated by average annual rate of return divided by maximum drawdown for previous years.</p>
+<p><span class="math notranslate nohighlight">\(Calmar Ratio = \frac{Average Annual Rate of Return} {Maximum Drawdown}\)</span></p>
 </div>
 <div class="section" id="turnover">
 <h2>Turnover<a class="headerlink" href="#turnover" title="Permalink to this headline">¶</a></h2>
+<p>A turnover ratio represents the amount of assets or liabilities that a company replaces in relation to its sales. The concept is useful for determining the efficiency with which a business utilizes its assets. In most cases, a high asset turnover ratio is considered good, since it implies that receivables are collected quickly, fixed assets are heavily utilized, and little excess inventory is kept on hand.</p>
+<p><span class="math notranslate nohighlight">\(Turnover = \frac{Net credit sales} {Average account receivable}\)</span></p>
 </div>
 <div class="section" id="colog-ratio">
 <h2>Colog Ratio<a class="headerlink" href="#colog-ratio" title="Permalink to this headline">¶</a></h2>
