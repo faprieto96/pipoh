@@ -1,6 +1,6 @@
 # Welcome to Pipoh
 <p align="center">
-    <img width=40% src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_logo.png?raw=true">
+    <img width=40% src="https://github.com/faprieto96/pipoh/blob/master/documentation/images/pipoh_logo_name.png?raw=true">
 </p>
 
 <!-- buttons -->
